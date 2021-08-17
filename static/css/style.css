@@ -17,6 +17,7 @@ body {
     background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);
     background: linear-gradient(to right, #26D0CE, #1A2980);
     
+    
 }
 
 body,
@@ -60,7 +61,7 @@ html {
 
 .nav-bar .menu-bar {
     position: absolute;
-    right: 30px;
+    right: 25px;
     top: 30px;
 }
 
@@ -81,8 +82,8 @@ html {
     overflow-x: hidden;
     transition: 0.5s all;
     background: #005AA7;
-    background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);
-    background: linear-gradient(to right, #FFFDE4, #005AA7,);
+    background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7,);
+    background: linear-gradient(to right, #FFFDE4, #005AA7);
     cursor: pointer;
 }
 
@@ -103,12 +104,17 @@ html {
     color: yellow;
 
 }
+.overlay-menu a:hover{
+    text-decoration: underline;
+    
+}
+
 
 .overlay-menu .close-button {
     position: absolute;
     font-size: 40px;
     right: 20px;
-    top: 5px;
+    top: 10px;
     color: yellow;
 }
 
@@ -385,4 +391,101 @@ h3 span {
     }
 
 
+}
+
+@media (max-width: 800px) {
+    .container-2 {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: 0px;
+    }
+
+    .footer-1 {
+        text-align: center;
+        justify-content: center;
+        display: inline-flex;
+        margin-bottom: 50px;
+
+    }
+
+    .footer-logo {
+        margin-top: -50px;
+    }
+
+    .footer-2 {
+        display: inline-flex;
+        padding: 5px;
+        padding-left: 40px;
+        padding-right: 40px
+    }
+
+    .footer-links {
+        display: inline-flex;
+
+    }
+    
+    .uppercase {
+        display: none;
+    }
+
+    .uppercase-1 {
+        display: none;
+    }
+
+    .street {
+        display: none;
+    }
+
+    .copy-right {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 0px;
+    }
+
+    .uppercase {
+        margin-top: 30px;
+
+    }
+}
+
+@media (max-width: 700px) {
+    .next-dest-media-4 {
+        padding-left: 60px;
+    }
+
+    .next-dest-media-1 {
+        padding-left: 50px;
+    }
+
+    .next-dest-1 {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .next-dest-2 {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .footer-2 {
+
+        padding-left: 10px;
+        padding-right: 40px
+    }
+}
+
+@media (max-width:415px) {
+    .overlay-menu a {
+        font-size: 20px;
+        padding: 3px;
+        
+    
+    }
 }
