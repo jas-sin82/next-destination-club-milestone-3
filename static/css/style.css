@@ -56,3 +56,57 @@ html {
     font-family: 'Playfair Display SC', serif;
 
 }
+
+.nav-bar .menu-bar {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+.nav-bar .menu-bar .open-button {
+    color: yellow;
+    font-size: 40px;
+    cursor: pointer;
+
+}
+
+.overlay-menu {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width:0%;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.5s all;
+    background: #005AA7;
+    background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);
+    background: linear-gradient(to right, #FFFDE4, #005AA7,);
+    cursor: pointer;
+}
+
+.overlay-items {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    top: 20%;
+    margin-top: 10px;
+
+}
+
+.overlay-menu a {
+    font-size: 30px;
+    padding: 5px;
+    display: block;
+    text-decoration: none;
+    color: yellow;
+
+}
+
+.overlay-menu .close-button {
+    position: absolute;
+    font-size: 40px;
+    right: 20px;
+    top: 5px;
+    color: yellow;
+}
