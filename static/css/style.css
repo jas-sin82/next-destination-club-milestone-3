@@ -325,3 +325,17 @@ h3 span {
     color: #f7b733;
 
 }
+
+/*media query --------*/
+
+@media (max-width: 1300px) {
+    .next-dest-media-3 {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .next-dest {
+        font-size: 20px;
+    }
+}
