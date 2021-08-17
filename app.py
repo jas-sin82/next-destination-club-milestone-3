@@ -81,13 +81,20 @@ def log_in():
     return render_template("login.html")
 
 
-# get destination   
+# get destinations   
 @app.route("/")
 @app.route("/get_destinations")
 def get_destinations():
     destinations = mongo.db.destinations.find()
     return render_template("destinations.html", destinations=destinations)
 
+
+# Contact page
+@app.route("/contact_page")
+def contact_page():
+    """ Return contact page """
+
+    return render_template("contact.html")
 
 
 if __name__ == "__main__":
