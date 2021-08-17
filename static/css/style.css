@@ -37,6 +37,7 @@ html {
     position: fixed;
     top: 0px;
     overflow-x: hidden;
+    z-index:200;
 }
 
 .nav-bar .logo {
@@ -76,7 +77,7 @@ html {
     left: 0px;
     height: 100%;
     width:0%;
-    z-index: 1;
+    z-index: 300;
     overflow-x: hidden;
     transition: 0.5s all;
     background: #005AA7;
@@ -109,4 +110,112 @@ html {
     right: 20px;
     top: 5px;
     color: yellow;
+}
+
+/* homepage ---*/
+
+.home-page-1 {
+    margin-left: -15px;
+
+}
+
+.next-dest {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.next-dest-1 {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.next-dest-2 {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.next-dest-3 {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.dest-3 {
+    padding-left: 60px;
+}
+
+.next-dest-5 {
+    color: white;
+    font-family: 'Playfair Display SC', serif;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+}
+
+.image-1 {
+    max-width: 100vw;
+    height: auto;
+}
+
+.image-2 {
+    width: 100vw;
+    max-height: auto;
+}
+
+.image-3 {
+    max-width: 100vw;
+    height: auto;
+}
+
+.next-dest-3 {
+    font-size: 20px;
+}
+
+.dest-1 {
+    font-size: 22px;
+    text-align: center;
+}
+
+.next-dest-media-1 {
+    margin-top: 100px;
+
+}
+
+.carousel-item {
+    max-width: 100vw;
+    height: auto;
+}
+
+/* register button---*/
+
+.home-page-button {
+
+    background: #44A08D;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    background-color: white;
+    color: orangered;
+    text-transform: uppercase;
+
+}
+
+.home-page-button:hover {
+    color: orangered;
+
+
 }
