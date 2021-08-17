@@ -234,3 +234,94 @@ html {
     background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
     
 }
+
+.footer-2 ul li {
+    list-style: none;
+}
+
+.footer-2 ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-links {
+    padding: 8px;
+}
+
+.social-link {
+    margin-top: 20px;
+
+}
+
+.social-link .social {
+    padding: 10px;
+
+}
+
+.social-link .social a {
+    text-decoration: none;
+
+}
+
+.social-link .social a i {
+    font-size: 40px;
+
+
+}
+
+.color-1 a i {
+    color: #f7b733;
+
+}
+
+.color-2 a i {
+    color: #f7b733;
+}
+
+.color-3 a i {
+    color: #f7b733;
+}
+
+.color-4 a i {
+    color: #f7b733;
+}
+
+.copy-right {
+    text-align: center;
+    font-size: small;
+    margin-top: 30px;
+    text-align: justify;
+    color: white;
+}
+
+.uppercase {
+    color: #f7b733;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+
+}
+
+.footer-logo{
+    justify-content: center;
+    text-align: justify;
+    letter-spacing: 3px;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 40px;
+    color: white;
+    text-transform: uppercase;
+    padding-top: 100px;
+
+}
+
+h3 span {
+    font-size: 10px;
+}
+
+.street {
+    color: white;
+}
+
+.uppercase-1 {
+    color: #f7b733;
+
+}
