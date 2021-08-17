@@ -8,16 +8,20 @@
                 <h1 class="contact-us">Contact Us</h1>
                 <hr class="underline">
                 <div class="form-box">
+                    <div id= "error_message"></div>
                     <form id="contact-form" onsubmit="return sendMail(this)">
                         <label class="contact-1"for="fullname">Full Name</label>
                         <input type="text" name="name" id="fullname" placeholder="Your Name" autocomplete="off"
-                            required>
+                            required onkeyup='validateName()'>
+                            <span class='error-message' id='name-error'></span><br>
                         <label class="contact-1" for="emailaddress">Email Address</label>
                         <input type="email" name="emailaddress" id="emailaddress" placeholder="Your Email Address"
-                            autocomplete="off" required>
+                            autocomplete="off" required onkeyup='validateEmail()'>
+                            <span class='error-message' id='email-error' ></span><br>
                         <label class="contact-1" for="message">Message</label>
                         <textarea name="message" id="message" rows="4"
-                            placeholder="Type your message here..."></textarea>
+                            placeholder="Type your message here..." onkeyup='validateMessage()'></textarea>
+                            <span class='error-message' id='message-error'></span>
                         <br>
                         <input type="submit" id="button" value="Send Email">
                     </form>

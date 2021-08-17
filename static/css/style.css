@@ -438,7 +438,10 @@ main{
      outline-color:lightblue;
     
  }
-
+.error-message{
+    font-size:12px;
+    
+}
 
 /*media query --------*/
 
