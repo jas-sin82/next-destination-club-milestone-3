@@ -332,6 +332,12 @@ h3 span {
 
 }
 
+.footer-2 a:hover{
+       color: yellow;
+   }
+
+
+
 /*media query --------*/
 
 @media (max-width: 1300px) {
