@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+<!--flash message-->
+<section>
+    <div class="container fl-message">
+        <div class="row">
+            <div class="col-12 text-center">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <h4>{{ message }}</h4>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </div>
+        </div>
+    </div>
+</section>
+<!--registration form-->
+<section>
+    <div class="container main-heading">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center regi-center ">Log in to your account</h1>
+            </div>
+        </div>
+        <div class="row">
+            <form class="col-sm-12 col-md-8 offset-md-2" method="POST" action="{{ url_for('log_in') }}">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-floating  mb-3">
+                            <input type="text" name="username" class="form-control" id="username"
+                                placeholder="Username" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required>
+                            <label for="username"><i class="fas fa-user-plus"></i>Username</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" name="password" class="form-control" id="password"
+                                placeholder="Password" minlength="8" maxlength="20" pattern="^[a-zA-Z0-9]{8,20}$" required>
+                            <label for="password"><i class="fas fa-user-lock"></i>Password</label>
+                        </div><br>
+                        <div class="d-grid ">
+                            <button class="btn btn-primary" type="submit">Log In<i
+                                    class="fas fa-sign-in-alt"></i></button>
+                        </div>
+                        <div class="text-center mb-3 mt-2">
+                            <p>  New to Next Destination Club?
+                                <a href="{{ url_for('register') }}">Create Account</a> 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
