@@ -339,3 +339,50 @@ h3 span {
         font-size: 20px;
     }
 }
+
+@media (max-width: 993px) {
+    .next-dest {
+        display: none;
+    }
+
+    .dest-1 {
+        text-transform: capitalize;
+        margin-top: 0px;
+    }
+
+    .image-1 {
+        margin-top: 0px;
+    }
+
+    .column-reverse {
+        flex-direction: column-reverse;
+    }
+
+
+    .image-2 {
+        margin-top: 80px;
+    }
+
+    .next-dest-media-3 {
+        margin-top: 70px;
+    }
+
+    .image-3 {
+        margin-top: 70px;
+        height: auto;
+        width: 100vw;
+    }
+
+    .next-dest-media-4 {
+        margin-top: 70px;
+    }
+
+    .image-4 {
+        margin-top: 70px;
+        min-width: 100vw;
+        margin-left: 15px;
+        margin-bottom: 50px;
+    }
+
+
+}
