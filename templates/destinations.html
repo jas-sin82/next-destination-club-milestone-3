@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block content %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Next Destination Club</title>
-</head>
 
-<body>
+
     {% for destination in destinations %}
         {{destination.destination_name}}<br>
         {{destination.category_name}}<br>
@@ -19,6 +13,4 @@
         {{destination.country_name}}
     {% endfor %}
 
-</body>
-
-</html>
+{% endblock %}
