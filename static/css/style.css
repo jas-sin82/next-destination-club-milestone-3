@@ -333,10 +333,40 @@ h3 span {
 }
 
 .footer-2 a:hover{
-       color: yellow;
-   }
+    color: yellow;
+}
 
+/*-----register page & login page----*/
 
+main{
+    min-height: calc(100vh - 436px);
+    
+}
+
+.main-heading{
+    margin-top:20px;
+    margin-bottom:100px;
+    
+    
+}
+  
+.regi-center{
+    margin-bottom:20px;
+    color:white;
+    font-family: 'Playfair Display SC', serif;
+  
+}
+
+.already-register{
+    font-size:12px;
+}
+
+.fl-message{
+    margin-top:150px;
+    font-family: 'Playfair Display SC', serif;
+    color:white;
+ }
+  
 
 /*media query --------*/
 
@@ -495,3 +525,4 @@ h3 span {
     
     }
 }
+
