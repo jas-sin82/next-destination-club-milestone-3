@@ -48,7 +48,42 @@
         {% block content %}
         {% endblock %}
     </main>
-   
+    <!--footer-->
+    <footer>
+        <div class="container-2">
+            <div class="footer-1">
+                <h3 class="footer-logo"> Next<br>Destination<br>Club<span>since 2018</span> </h3>
+            </div>
+            <div class=" footer-2">
+                <ul>
+                    <li class="footer-links"> <a href="{{ url_for('home_page') }}">Home</a></li>
+                    <li class="footer-links"> <a href="{{ url_for('get_destinations') }}">Destinations</a></li>
+                    <li class="footer-links"> <a href="">Add Destination</a></li>
+                    <li class="footer-links"> <a href="">Profile</a></li>
+                    <li class="footer-links"> <a href="">Register</a></li>
+                    <li class="footer-links"> <a href="">Contact</a></li>
+                    <li class="footer-links"> <a href="">Log out</a></li>
+                    <li class="footer-links"> <a href="">Log in</a></li>
+                </ul>
+            </div>
+            <div class=" footer-3">
+                <h3 class="address uppercase">Address</h3>
+                <p class="street"> Next Destination Club <br> Andra Långgatan 2, <br>413 03 <br> Gothenburg </p>
+                <h5 class="uppercase-1"> find us on :</h5>
+                <div class="social-link">
+                    <span class="social color-1"><a href="http://www.facebook.com" target="_blank" rel="noopener"><i
+                                class="fab fa-facebook-square"></i> </a></span>
+                    <span class="social color-2"><a href="http://www.twitter.com" target="_blank" rel="noopener"><i
+                                class="fab fa-twitter-square"></i> </a></span>
+                    <span class="social color-3"><a href="http://www.youtube.com" target="_blank" rel="noopener"> <i
+                                class="fab fa-youtube"></i></a></span>
+                    <span class="social color-4"><a href="https://www.instagram.com" target="_blank" rel="noopener"><i
+                                class="fab fa-instagram"></i></a></span>
+                    <p class="copy-right">copyright © Next Destination 2020.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"></script>
