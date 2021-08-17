@@ -36,7 +36,7 @@
                 <a href="#">Add Destination</a>
                 <a href="#">Profile</a>
                 <a href="#">Manage Categories</a>
-                <a href="#">Register</a>
+                <a href="{{ url_for('register') }}">Register</a>
                 <a href="#">Contact</a>
                 <a href="#">Log out</a>
                 <a href="#">Log in</a>
@@ -60,7 +60,7 @@
                     <li class="footer-links"> <a  href="{{ url_for('get_destinations') }}">Destinations</a></li>
                     <li class="footer-links"> <a  href="">Add Destination</a></li>
                     <li class="footer-links"> <a  href="">Profile</a></li>
-                    <li class="footer-links"> <a  href="">Register</a></li>
+                    <li class="footer-links"> <a  href="{{ url_for('register') }}">Register</a></li>
                     <li class="footer-links"> <a  href="">Contact</a></li>
                     <li class="footer-links"> <a  href="">Log out</a></li>
                     <li class="footer-links"> <a  href="">Log in</a></li>
