@@ -516,6 +516,11 @@ textarea {
     font-family: 'Playfair Display SC', serif;
 }
 
+.small-text{
+    font-size:12px;
+   
+}
+
 
 /*media query --------*/
 
