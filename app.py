@@ -122,6 +122,32 @@ def get_destinations():
     return render_template("destinations.html", destinations=destinations)
 
 
+# add destination
+@app.route("/add_destination", methods=["GET", "POST"])
+def add_destination():
+    if session:
+        if request.method == "POST":
+            destination = {
+                "destination_name": request.form.get("destination_name"),
+                "category_name": request.form.get("category_name"),
+                "country": request.form.get("country"),
+                "climate": request.form.get("climate"),
+                "language": request.form.get("language"),
+                "best_time_to_travel": request.form.get("best_time_to_travel"),
+                "destination_description": request.form.get("destination_description"),
+                "created_by": session["user"]
+            }
+            mongo.db.destinations.insert_one(destination)
+            flash("Destination Successfully Added")
+            return redirect(url_for("get_destinations"))
+
+        categories = mongo.db.categories.find().sort("category_name", 1)
+        return render_template("add-destination.html", categories=categories)
+    
+    else:
+        return redirect(url_for("home"))
+
+
 # Contact page
 @app.route("/contact_page")
 def contact_page():
