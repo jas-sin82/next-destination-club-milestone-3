@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block content %}
+<section>
+    <div class="container profile-container ">
+        <div class="row">
+            <div class="col text-cente mb-4">
+                <h1 class="profile-name">
+                    {{ username }}'s Profile
+                </h1>
+                <a href="#" class="edit-profile">Edit Profile</a>
+                <a href="#" class="delete-profile" data-bs-toggle="modal" data-bs-target="#delete-user">
+                    Delete Profile
+                </a>
+                <!-- warning mesasge & delete button -->
+                <div class="modal fade" id="delete-user" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Remove Profile</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p> Are you sure ! You want to delete your profile? </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            {% for destination in destinations if session.user|lower == event.created_by|lower %}
+            <div class="col-lg-4 col-md-6">
+                <div class="card-body">
+                    <h4 class="card-title mb-3 text-center">{{ destination.category_name }}</h4>
+                    <h5 class="card-text mb-3">{{ destination.destination_name }}</h5>
+                    <p class="card-text mb-3">{{ destination.climate}}</p>
+                    <p class="card-text mb-3">{{ destination.language}}</p>
+                    <p class="card-text mb-3">{{ destination.best_time_to_travel }}</p>
+                    <p class="card-text mb-3">{{destination.country_name}}</p>
+                    <p class="card-text mb-3">{{destination.created_by }}</p>
+                    <div class="mb-3">
+                        <a href="" class="mb-3">Edit</a>
+                        <a href="" class="mb-3">Delete</a>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <div class="col mb-5 text-center profile-message">
+                <h2 class="profile-message mt-5">You haven't save any destination yet...</h2>
+               <a href="" class="edit-profile">Create Event</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

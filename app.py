@@ -11,11 +11,9 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
-
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
-
 
 mongo = PyMongo(app)
 
@@ -49,6 +47,8 @@ def register():
         # put the new user into 'session' 
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
+        return redirect(url_for("profile", username=session["user"]))
+
     return render_template("register.html")
 
 
@@ -67,6 +67,8 @@ def log_in():
                     session["user"] = request.form.get("username").lower()
                     flash("Hi {}! Welcome to Next Destination club!".format(
                         request.form.get("username")))
+                    return redirect(url_for(
+                        "profile", username=session["user"]))
             
             else:
                 # invalid password match
@@ -81,8 +83,39 @@ def log_in():
     return render_template("login.html")
 
 
-# get destinations   
-@app.route("/")
+# user profile 
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    """grab the session user's username from db
+       search session users created events"""
+
+    if session:
+        username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+        user_profile = mongo.db.users.find_one({"username": session["user"]})
+        destinations = list(mongo.db.events.find({"created_by": session["user"]}))
+    
+        if session["user"]:
+            return render_template("profile.html", username=username, 
+                destinations=destinations, user_profile=user_profile)
+
+    return redirect(url_for("log_in"))
+
+
+#log out
+@app.route("/log_out")
+def log_out():
+    """
+    remove user from session cookie &
+    return to login page
+    """
+
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("log_in"))
+
+
+# get destinations
 @app.route("/get_destinations")
 def get_destinations():
     destinations = mongo.db.destinations.find()

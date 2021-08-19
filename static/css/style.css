@@ -8,22 +8,22 @@
     box-sizing: border-box;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
-  }
+}
 
 body {
     background: #1A2980;
     background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);
     background: linear-gradient(to right, #26D0CE, #1A2980);
-    
-    
+
+
 }
 
 body,
 html {
     overflow-x: hidden;
-    height:100%;
+    height: 100%;
 
 }
 
@@ -80,7 +80,7 @@ html {
     transition: 0.5s all;
     background: #005AA7;
     background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);
-    background: linear-gradient(to right, #FFFDE4, #005AA7,);
+    background: linear-gradient(to right, #FFFDE4, #005AA7, );
     cursor: pointer;
 }
 
@@ -102,9 +102,10 @@ html {
     font-family: 'Playfair Display SC', serif;
 
 }
-.overlay-menu a:hover{
+
+.overlay-menu a:hover {
     text-decoration: underline;
-    
+
 }
 
 
@@ -118,9 +119,9 @@ html {
 
 /* homepage ---*/
 
-.home-page-margin{
-    margin-top:-180px;
- }
+.home-page-margin {
+    margin-top: -180px;
+}
 
 .home-page-1 {
     margin-left: -15px;
@@ -240,11 +241,11 @@ html {
     background: #667db6;
     background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
     background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
-    
+
 }
 
-.footer-2{
-    margin-top:40px;
+.footer-2 {
+    margin-top: 40px;
 }
 
 .footer-2 ul li {
@@ -313,7 +314,7 @@ html {
 
 }
 
-.footer-logo{
+.footer-logo {
     justify-content: center;
     text-align: justify;
     letter-spacing: 3px;
@@ -339,115 +340,161 @@ h3 span {
 
 }
 
-.footer-2 a:hover{
+.footer-2 a:hover {
     color: yellow;
 }
 
 /*-----register page & login page----*/
 
-main{
+main {
     min-height: calc(100vh - 436px);
-    
+
 }
 
-.main-heading{
-    margin-top:20px;
-    margin-bottom:100px;
-    
-    
+.main-heading {
+    margin-top: 20px;
+    margin-bottom: 100px;
+
+
 }
-  
-.regi-center{
-    margin-bottom:20px;
-    color:white;
+
+.regi-center {
+    margin-bottom: 20px;
+    color: white;
     font-family: 'Playfair Display SC', serif;
-  
+
 }
 
-.already-register{
-    font-size:12px;
+.already-register {
+    font-size: 12px;
 }
 
-.fl-message{
-    margin-top:50px;
+.fl-message {
+    margin-top: 50px;
     font-family: 'Playfair Display SC', serif;
-    color:white;
- }
+    color: white;
+}
 
 /*contact page--*/
 
-.contact-box{
+.contact-box {
     border-radius: 10px;
     background-color: whitesmoke;
-    max-width:800px;
-    margin-top:70px;
-    margin-bottom:100px;
-    
- }
- 
- .contact-us{
+    max-width: 800px;
+    margin-top: 70px;
+    margin-bottom: 100px;
+
+}
+
+.contact-us {
     text-align: center;
-    padding-top:10px;
+    padding-top: 10px;
     font-family: 'Playfair Display SC', serif;
- }
+}
 
- .underline{
+.underline {
     background-color: orangered;
- }
- 
- .form-box{
+}
+
+.form-box {
     display: block;
-    padding-top:10px;
-    padding:30px;
+    padding-top: 10px;
+    padding: 30px;
 
- }
- 
- input[type=text]{
-    width:100%;
-    padding-bottom:10px;
-    margin-bottom:10px;
-  }
+}
 
-  input[type=email]{
-    width:100%;
-    padding-bottom:10px;
-    margin-bottom:10px;
-  }
- 
-  textarea{
-    width:100%;
-    margin-bottom:10px;
-  }
- 
-  input[type=submit]{
+input[type=text] {
     width: 100%;
-    height:40px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+input[type=email] {
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input[type=submit] {
+    width: 100%;
+    height: 40px;
     /*background-color:rgb(153, 56, 71);*/
     background: #667db6;
     background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
     background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
-    opacity:0.6;
-    color:white;
+    opacity: 0.6;
+    color: white;
     margin-bottom: 20px;
     text-align: center;
-    
-  }
 
-  .contact-1{
-      text-align: left;
-      margin-bottom: 5px;
-      font-family: 'Playfair Display SC', serif;
-      font-weight: 500;
-      font-size:larger;
-  }
-  
- form input[type=text],input[type=email], textarea {
-     outline-color:lightblue;
-    
- }
-.error-message{
-    font-size:12px;
-    
+}
+
+.contact-1 {
+    text-align: left;
+    margin-bottom: 5px;
+    font-family: 'Playfair Display SC', serif;
+    font-weight: 500;
+    font-size: larger;
+}
+
+form input[type=text],
+input[type=email],
+textarea {
+    outline-color: lightblue;
+
+}
+
+.error-message {
+    font-size: 12px;
+
+}
+
+/* prfilepage*/
+
+.profile-container {
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.profile-name {
+    color: white;
+    font-family: 'Playfair Display SC', serif;
+}
+
+.edit-profile {
+    color: yellow;
+    font-size: 20px;
+    font-family: 'Playfair Display SC', serif;
+    text-decoration: none;
+}
+
+.delete-profile {
+    color: yellow;
+    font-size: 20px;
+    font-family: 'Playfair Display SC', serif;
+    text-decoration: none;
+}
+
+.delete-profile:hover {
+    color: red;
+    opacity: 0.5;
+}
+
+.modal-content {
+    font-family: 'Playfair Display SC', serif;
+}
+
+.profile-message {
+    color: white;
+    font-family: 'Playfair Display SC', serif;
+
 }
 
 /*media query --------*/
@@ -507,11 +554,12 @@ main{
         margin-left: 15px;
         margin-bottom: 50px;
     }
-    .contact-box{
-        width:90%;
-        
-         
-     }
+
+    .contact-box {
+        width: 90%;
+
+
+    }
 
 
 }
@@ -549,7 +597,7 @@ main{
         display: inline-flex;
 
     }
-    
+
     .uppercase {
         display: none;
     }
@@ -593,14 +641,15 @@ main{
         padding-left: 40px;
         padding-right: 40px;
     }
-  
+
 
 }
-@media (max-width: 600px){
-    .main-heading{
-        margin-bottom:80px;
-        padding-left:30px;
-        padding-right:30px;
+
+@media (max-width: 600px) {
+    .main-heading {
+        margin-bottom: 80px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 }
 
@@ -617,16 +666,17 @@ main{
     .overlay-menu a {
         font-size: 20px;
         padding: 3px;
-        
-    
+
+
     }
 }
 
-@media (max-width: 380px){
-    .main-heading{
-        margin-top:10px;
+@media (max-width: 380px) {
+    .main-heading {
+        margin-top: 10px;
     }
+
     .overlay-menu a {
-      font-size:20px;
+        font-size: 20px;
     }
 }
