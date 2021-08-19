@@ -165,6 +165,14 @@ def contact_page():
     return render_template("contact.html")
 
 
+# destination search 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    destinations = list(mongo.db.destinations.find({"$text": {"$search": query}}))
+    return render_template("destinations.html", destinations=destinations)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
