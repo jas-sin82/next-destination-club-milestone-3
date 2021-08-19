@@ -46,7 +46,8 @@
                     <p class="card-text mb-3">{{ destination.climate}}</p>
                     <p class="card-text mb-3">{{ destination.language}}</p>
                     <p class="card-text mb-3">{{ destination.best_time_to_travel }}</p>
-                    <p class="card-text mb-3">{{destination.country_name}}</p>
+                    <p class="card-text mb-3">{{destination.country}}</p>
+                    <p class="card-text mb-3">{{destination.destination_description}}</p>
                     <p class="card-text mb-3">{{destination.created_by }}</p>
                     <div class="mb-3">
                         <a href="" class="mb-3">Edit</a>
@@ -57,7 +58,7 @@
             {% else %}
             <div class="col mb-5 text-center profile-message">
                 <h2 class="profile-message mt-5">You haven't save any destination yet...</h2>
-               <a href="" class="edit-profile">Create Event</a>
+               <a href="{{ url_for('add_destination') }}" class="edit-profile">Create Event</a>
             </div>
             {% endfor %}
         </div>
