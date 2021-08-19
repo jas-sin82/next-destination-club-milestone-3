@@ -118,8 +118,12 @@ def log_out():
 # get destinations
 @app.route("/get_destinations")
 def get_destinations():
-    destinations = mongo.db.destinations.find()
-    return render_template("destinations.html", destinations=destinations)
+    if session:
+        destinations = list(mongo.db.destinations.find().sort("category_name", 1))
+        return render_template("destinations.html", destinations=destinations)
+    else:
+        return redirect(url_for("home"))
+    
 
 
 # add destination
