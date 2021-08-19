@@ -13,7 +13,7 @@
                 </p>
             </div>
             <div class="row">
-                <form class="col-sm-12 col-md-8 col-lg-6  offset-md-2 offset-lg-3 mt-5 mb-5" method="POST"
+                <form class="col-sm-12 col-md-8 col-lg-6  offset-md-2 offset-lg-3 mt-5 mb-5 add-destination-form" method="POST"
                     action="{{ url_for('add_destination') }}">
                     <div class="card">
                         <div class="card-body">
@@ -21,16 +21,17 @@
                                 <h4 class=" mb-5 mt-3 text-center  holiday-desti-1 "> Next Destination Club </h4>
                                 <div class="form-floating ">
                                     <input type="text" name="destination_name" class="form-control"
-                                        id="destination_name" placeholder="Destination Name"
-                                        pattern="^[a-zA-Z0-9]{5,15}$" required>
+                                        id="destination_name" placeholder="Destination Name" required>
                                     <label for="destination_name">Destination Name</label>
                                 </div>
                                 <div class="form-floating mb-2">
                                     <label for="category_name"></label>
-                                    <select class="form-select" aria-label="category select options" id="category_name" name="category_name">
+                                    <select class="form-select " aria-label="category select options" id="category_name"
+                                        name="category_name">
                                         <option selected>Category</option>
                                         {% for category in categories %}
-                                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                                        <option value="{{ category.category_name }}">{{ category.category_name }}
+                                        </option>
                                         {% endfor %}
                                     </select>
                                 </div>
@@ -57,7 +58,7 @@
                                 <div class="form-floating mb-3">
                                     <textarea class="form-control" name="destination_description"
                                         placeholder="Please describe something about destination"
-                                        id="destination_description"></textarea>
+                                        id="destination_description" style="height: 100px"></textarea>
                                     <label for="destination_description">Destination Description</label>
                                 </div><br>
                                 <!--login button-->
@@ -70,10 +71,5 @@
                 </form>
             </div>
         </div>
-
-
-
-
-
 
         {% endblock %}
