@@ -1,16 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-
-    {% for destination in destinations %}
-        {{destination.destination_name}}<br>
-        {{destination.category_name}}<br>
-        {{destination.climate}}<br>
-        {{destination.language}}<br>
-        {{destination.best_time_to_travel}}<br>
-        {{destination.destination_description}}<br>
-        {{destination.country}}
-    {% endfor %}
+    <div class="container">
+        {% if destinations|length > 0 %}
+        <div class="row">
+            {% for destination in destinations %}
+            <div class="col-lg-4 col-md-6">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ destination.destination_image }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title mb-3 text-center">{{ destination.destination_name }}</h4>
+                        <h5 class="card-text mb-3">{{ destination.category_name }}</h5>
+                        <p class="card-text mb-3">{{ destination.country }}</p>
+                        <p class="card-text mb-3">{{ destination.climate }}</p>
+                        <p class="card-text mb-3">{{ destination.language}}</p>
+                        <p class="card-text mb-3">{{destination.best_time_to_travel }}</p>
+                        <p class="card-text mb-3">{{ destination.destination_description }}</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
 
 {% endblock %}
