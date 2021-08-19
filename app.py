@@ -134,7 +134,8 @@ def add_destination():
                 "climate": request.form.get("climate"),
                 "language": request.form.get("language"),
                 "best_time_to_travel": request.form.get("best_time_to_travel"),
-                "destination_description": request.form.get("destination_description"),
+                "destination_description": request.form.get(
+                    "destination_description"),
                 "created_by": session["user"]
             }
             mongo.db.destinations.insert_one(destination)

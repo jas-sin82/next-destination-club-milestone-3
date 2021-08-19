@@ -2,21 +2,78 @@
 {% block content %}
 <!--add destination-->
 <section>
-    <div class="container-fluid align-items-center">
+    <div class="container-fluid ">
         <div class="row">
-            <div class="col-lg-8 text-center center mt-5">
-                <h2> Add your best holiday destinations</h2>
-                <p>
-                    lets go one step ahead & upgrade your profile ! 
-                    here you can add your favorite holiday destination 
+            <div class="col-12 text-center holiday-desti mt-2">
+                <h1> Add your best holiday destinations</h1>
+                <p class="desti-message">
+                    lets go one step ahead & upgrade your profile !
+                    here you can add your favorite holiday destination
                     & share with others.
                 </p>
             </div>
+            <div class="row">
+                <form class="col-sm-12 col-md-8 col-lg-6  offset-md-2 offset-lg-3 mt-5 mb-5" method="POST"
+                    action="{{ url_for('add_destination') }}">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <h4 class=" mb-5 mt-3 text-center  holiday-desti-1 "> Next Destination Club </h4>
+                                <div class="form-floating ">
+                                    <input type="text" name="destination_name" class="form-control"
+                                        id="destination_name" placeholder="Destination Name"
+                                        pattern="^[a-zA-Z0-9]{5,15}$" required>
+                                    <label for="destination_name">Destination Name</label>
+                                </div>
+                                <div class="form-floating mb-2">
+                                    <label for="category_name"></label>
+                                    <select class="form-select" aria-label="category select options" id="category_name" name="category_name">
+                                        <option selected>Category</option>
+                                        {% for category in categories %}
+                                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="form-floating ">
+                                    <input type="text" name="country" class="form-control" id="country"
+                                        placeholder="Country" required>
+                                    <label for="country">Country</label>
+                                </div>
+                                <div class="form-floating  ">
+                                    <input type="text" name="climate" class="form-control" id="climate"
+                                        placeholder="Climate" required>
+                                    <label for="climate">Climate</label>
+                                </div>
+                                <div class="form-floating  ">
+                                    <input type="text" name="language" class="form-control" id="language"
+                                        placeholder="Language" required>
+                                    <label for="language">Language</label>
+                                </div>
+                                <div class="form-floating  ">
+                                    <input type="text" name="best_time_to_travel" class="form-control"
+                                        id="best_time_to_travel" placeholder="Best time to travel" required>
+                                    <label for="best_time_to_travel">Best time to travel</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <textarea class="form-control" name="destination_description"
+                                        placeholder="Please describe something about destination"
+                                        id="destination_description"></textarea>
+                                    <label for="destination_description">Destination Description</label>
+                                </div><br>
+                                <!--login button-->
+                                <div class="d-grid mb-3">
+                                    <button class="btn btn-primary" type="submit">Submit</button>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                </form>
+            </div>
         </div>
-        
 
 
 
 
 
-{% endblock %}
+
+        {% endblock %}
