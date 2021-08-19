@@ -22,11 +22,8 @@ body {
 
 body,
 html {
-    width:100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
     overflow-x: hidden;
+    height:100%;
 
 }
 
@@ -34,11 +31,11 @@ html {
 
 .nav-bar {
     width: 100%;
-    background-color: transparent;
-    position: fixed;
+    cursor: pointer;
     top: 0px;
-    overflow-x: hidden;
-    z-index:200;
+    z-index: 200;
+    position: relative;
+    cursor: pointer;
 }
 
 .nav-bar .logo {
@@ -60,8 +57,8 @@ html {
 }
 
 .nav-bar .menu-bar {
-    position: absolute;
-    right: 25px;
+    position: fixed;
+    right: 30px;
     top: 30px;
 }
 
@@ -77,13 +74,13 @@ html {
     top: 0px;
     left: 0px;
     height: 100%;
-    width:0%;
+    width: 0%;
     z-index: 300;
     overflow-x: hidden;
     transition: 0.5s all;
     background: #005AA7;
-    background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7,);
-    background: linear-gradient(to right, #FFFDE4, #005AA7);
+    background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);
+    background: linear-gradient(to right, #FFFDE4, #005AA7,);
     cursor: pointer;
 }
 
@@ -91,7 +88,7 @@ html {
     position: relative;
     width: 100%;
     text-align: center;
-    top: 20%;
+    top: 25%;
     margin-top: 10px;
 
 }
@@ -102,6 +99,7 @@ html {
     display: block;
     text-decoration: none;
     color: yellow;
+    font-family: 'Playfair Display SC', serif;
 
 }
 .overlay-menu a:hover{
@@ -119,6 +117,10 @@ html {
 }
 
 /* homepage ---*/
+
+.home-page-margin{
+    margin-top:-180px;
+ }
 
 .home-page-1 {
     margin-left: -15px;
@@ -241,6 +243,10 @@ html {
     
 }
 
+.footer-2{
+    margin-top:40px;
+}
+
 .footer-2 ul li {
     list-style: none;
 }
@@ -315,7 +321,8 @@ html {
     font-size: 40px;
     color: white;
     text-transform: uppercase;
-    padding-top: 100px;
+    padding-top: 80px;
+
 
 }
 
@@ -362,7 +369,7 @@ main{
 }
 
 .fl-message{
-    margin-top:150px;
+    margin-top:50px;
     font-family: 'Playfair Display SC', serif;
     color:white;
  }
@@ -373,7 +380,7 @@ main{
     border-radius: 10px;
     background-color: whitesmoke;
     max-width:800px;
-    margin-top:200px;
+    margin-top:70px;
     margin-bottom:100px;
     
  }
@@ -534,8 +541,8 @@ main{
     .footer-2 {
         display: inline-flex;
         padding: 5px;
-        padding-left: 40px;
-        padding-right: 40px
+        text-align: center;
+        justify-content: center;
     }
 
     .footer-links {
@@ -589,6 +596,14 @@ main{
   
 
 }
+@media (max-width: 600px){
+    .main-heading{
+        margin-bottom:80px;
+        padding-left:30px;
+        padding-right:30px;
+    }
+}
+
 
 @media (max-width: 500px) {
     .footer-2 {
@@ -607,3 +622,11 @@ main{
     }
 }
 
+@media (max-width: 380px){
+    .main-heading{
+        margin-top:10px;
+    }
+    .overlay-menu a {
+      font-size:20px;
+    }
+}
