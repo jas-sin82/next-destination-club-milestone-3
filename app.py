@@ -122,11 +122,38 @@ def log_out():
 @app.route("/get_destinations")
 def get_destinations():
     if session:
-        destinations = list(mongo.db.destinations.find().sort("category_name", 1))
+        destinations = list(mongo.db.destinations.find().sort("destination_name", 1))
         return render_template("destinations.html", destinations=destinations)
     else:
-        return redirect(url_for("home"))
-    
+        return redirect(url_for("home_page"))
+
+
+
+# singel destination page
+@app.route("/destination/<destination_id>", methods=['GET'])
+def single_destination_page(destination_id):
+    try:
+        destination = mongo.db.destinations.find_one({"_id": ObjectId(destination_id)})
+        return render_template("one-destination.html", destination=destination)
+    except:
+        return redirect(url_for("home_page"))
+
+
+# Contact page
+@app.route("/contact_page")
+def contact_page():
+    """ Return contact page """
+
+    return render_template("contact.html")
+
+
+
+# destination search 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    destinations = list(mongo.db.destinations.find({"$text": {"$search": query}}))
+    return render_template("destinations.html", destinations=destinations)
 
 
 # add destination
@@ -154,23 +181,8 @@ def add_destination():
         return render_template("add-destination.html", categories=categories)
     
     else:
-        return redirect(url_for("home"))
+        return redirect(url_for("home_page"))
 
-
-# Contact page
-@app.route("/contact_page")
-def contact_page():
-    """ Return contact page """
-
-    return render_template("contact.html")
-
-
-# destination search 
-@app.route("/search", methods=["GET", "POST"])
-def search():
-    query = request.form.get("query")
-    destinations = list(mongo.db.destinations.find({"$text": {"$search": query}}))
-    return render_template("destinations.html", destinations=destinations)
 
 
 if __name__ == "__main__":
