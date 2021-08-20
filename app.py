@@ -184,6 +184,37 @@ def add_destination():
         return redirect(url_for("home_page"))
 
 
+#edit profile
+@app.route("/edit-profile/<user_id>", methods=["GET", "POST"])
+def edit_profile(user_id):
+    if session:
+        session_user = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+        users = list(mongo.db.users.find({"_id": ObjectId(user_id)}))
+
+        for user in users:
+            username = user['username']
+
+            if session_user == username:
+                if request.method == "POST":
+                    update_profile = {
+                        "username": request.form.get("username").lower(),
+                        "password": generate_password_hash(
+                            request.form.get("password"))
+                    }
+                    session["user"] = request.form.get("username").lower()
+                    mongo.db.users.update(
+                        {"_id": ObjectId(user_id)}, update_profile)
+                    flash("Profile Updated")
+                    return redirect(url_for("profile", username=session['user']))
+            else:
+                flash("You Do Not Have Permission To Perform This Action")
+                return redirect(url_for("profile", username=session['user']))
+    else:
+        return redirect(url_for("home_page"))
+
+    return render_template("edit-profile.html", user=user)
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
