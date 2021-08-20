@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section>
+    <div class="container main-heading">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center regi-center ">Update Profile</h1>
+            </div>
+        </div>
+        <div class="row">
+            <form class="col-sm-12 col-md-8 offset-md-2" method="POST"
+                action="{{ url_for('edit_profile', user_id=user._id) }}">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-floating  mb-3">
+                            <input type="text" name="username" class="form-control" id="username"
+                                value="{{ user.username }}" placeholder="Username" minlength="5" maxlength="15"
+                                pattern="^[a-zA-Z0-9]{5,15}$" required>
+                            <label for="username"><i class="fas fa-user-plus"></i>New Username</label>
+                            <p class="mt-1 already-register">Username Must contain letters and/or numbers | Min length 5
+                                characters</p>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" name="password" class="form-control" id="password"
+                                placeholder="Password" minlength="8" maxlength="20" pattern="^[a-zA-Z0-9]{8,20}$"
+                                required>
+                            <label for="password"><i class="fas fa-user-lock"></i> New Password</label>
+                            <p class="mt-1 already-register">Must contain letters and/or numbers | Min length 8
+                                characters</p>
+                        </div><br>
+                        <div class="d-grid ">
+                            <button class="btn btn-primary" type="submit">Update<i
+                                    class="fas fa-sign-in-alt"></i></button>
+                            <p class= "mt-2 "> I dont think I want update my profile?
+                                <a href="{{ url_for('profile', username=session['user']) }}">Back to Profile page</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

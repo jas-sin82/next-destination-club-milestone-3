@@ -7,7 +7,7 @@
                 <h1 class="profile-name">
                     {{ username }}'s Profile
                 </h1>
-                <a href="#" class="edit-profile">Edit Profile</a>
+                <a href="{{ url_for('edit_profile', user_id=user_profile._id) }}" class="edit-profile">Edit Profile</a>
                 <a href="#" class="delete-profile" data-bs-toggle="modal" data-bs-target="#delete-user">
                     Delete Profile
                 </a>
