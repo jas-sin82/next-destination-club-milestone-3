@@ -48,8 +48,34 @@
                     <a class="text-center show-text-2"
                         href="{{url_for('single_destination_page', destination_id=destination._id)}}">
                         {{ destination.destination_name }} </a>
-                    <a class="btn btn-primary mt-2"
+                    <a class="btn btn-primary mt-2 "
                         href="{{ url_for('update_destination', destination_id=destination._id) }}">Edit Destination</a>
+                    <a class="delete-profile-1 btn btn-secondary mt-2"
+                        href=""  data-bs-toggle="modal" data-bs-target="#delete-destination">Delete
+                        Destination</a>
+                    <!-- warning mesasge & delete button -->
+                    <div class="modal fade" id="delete-destination" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Remove destination</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>{{ username }}! Are you sure ! You want to delete your destination ? </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancel</button>
+                                    <a class="btn btn-primary "
+                                        href="">Delete</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             {% else %}
