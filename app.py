@@ -207,13 +207,32 @@ def edit_profile(user_id):
                         {"_id": ObjectId(user_id)}, update_profile)
                     flash("Profile Updated")
                     return redirect(url_for("profile", username=session['user']))
-            else:
-                flash("You Do Not Have Permission To Perform This Action")
-                return redirect(url_for("profile", username=session['user']))
+           
     else:
         return redirect(url_for("home_page"))
 
     return render_template("edit-profile.html", user=user)
+
+
+#remove profile
+@app.route("/remove-user-profile/<user_id>")
+def remove_user_profile(user_id):
+    if session:
+        session_user = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+        users = list(mongo.db.users.find({"_id": ObjectId(user_id)}))
+
+        for user in users:
+            username = user['username']
+
+            if session_user == username:
+                mongo.db.destinations.delete_many({"created_by": session["user"]})
+                mongo.db.users.delete_one({"_id": ObjectId(user_id)})
+                session.pop("user")
+                return redirect(url_for("home_page"))
+          
+    else:
+        return redirect(url_for("home_page"))
 
 
 if __name__ == "__main__":
