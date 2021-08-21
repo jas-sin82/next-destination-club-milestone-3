@@ -55,7 +55,7 @@ function emailSuccess() {
   });
 }
 
-/* form validation form Validation code taken from https://stackoverflow.com/questions/24128659/contact-form-validation-javascript */
+/* form Validation code taken from https://stackoverflow.com/questions/24128659/contact-form-validation-javascript */
 
 function validateName() {
 
