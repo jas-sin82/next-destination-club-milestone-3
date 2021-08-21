@@ -219,7 +219,7 @@ html {
     margin-top: 10px;
     background-color: white;
     color: orangered;
-    text-transform: uppercase;
+    
 
 }
 
@@ -474,6 +474,17 @@ textarea {
     font-family: 'Playfair Display SC', serif;
     text-decoration: none;
 }
+.edit-profile-1 {
+    color: yellow;
+    font-size: 20px;
+    font-family: 'Playfair Display SC', serif;
+    text-decoration: none;
+}
+.edit-profile-1:hover{
+    color:white;
+}
+
+
 
 .delete-profile {
     color: yellow;
