@@ -529,6 +529,10 @@ textarea {
 
 }
 
+.text-sm{
+    font-size:14px;
+}
+
 .show-text-1 {
     color: white;
     font-family: 'Playfair Display SC', serif;
