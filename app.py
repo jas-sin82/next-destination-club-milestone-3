@@ -184,6 +184,7 @@ def add_destination():
         return redirect(url_for("home_page"))
 
 
+
 #edit profile
 @app.route("/edit-profile/<user_id>", methods=["GET", "POST"])
 def edit_profile(user_id):
@@ -267,7 +268,26 @@ def update_destination(destination_id):
         destination = mongo.db.destinations.find_one({"_id": ObjectId(destination_id)})
         categories = mongo.db.categories.find().sort("category_name", 1)
         return render_template("update-destination.html", destination=destination, categories=categories)
-    
+
+
+ # remove destination
+@app.route("/remove-destination/<destination_id>")
+def remove_destination(destination_id):
+    if session:
+        username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+        destinations = list(mongo.db.destinations.find({"_id": ObjectId(destination_id)}))
+
+        for destination in destinations:
+            user = destination['created_by']
+
+            if username == user:
+                mongo.db.destinations.delete_one({"_id": ObjectId(destination_id)})
+                flash("Destination Successfully Deleted")
+         
+
+        return redirect(url_for("profile", username=session['user']))
+     
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
