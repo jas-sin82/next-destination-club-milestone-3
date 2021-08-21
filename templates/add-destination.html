@@ -13,8 +13,8 @@
                 </p>
             </div>
             <div class="row">
-                <form class="col-sm-12 col-md-8 col-lg-6  offset-md-2 offset-lg-3 mt-5 mb-5 add-destination-form" method="POST"
-                    action="{{ url_for('add_destination') }}">
+                <form class="col-sm-12 col-md-8 col-lg-6  offset-md-2 offset-lg-3 mt-5 mb-5 add-destination-form"
+                    method="POST" action="{{ url_for('add_destination') }}">
                     <div class="card">
                         <div class="card-body">
                             <div class="row">
@@ -22,13 +22,14 @@
                                 <div class="form-floating ">
                                     <input type="text" name="destination_name" class="form-control"
                                         id="destination_name" placeholder="Destination Name" required>
-                                    <label for="destination_name">Destination Name</label>
+                                    <label for="destination_name"><i class="fas fa-map-marker-alt p-2"></i> Destination
+                                        Name</label>
                                 </div>
                                 <div class="form-floating mb-2">
                                     <label for="category_name"></label>
                                     <select class="form-select " aria-label="category select options" id="category_name"
-                                        name="category_name">
-                                        <option selected>Category</option>
+                                        name="category_name" required>
+                                        <option value="">Category</option>>
                                         {% for category in categories %}
                                         <option value="{{ category.category_name }}">{{ category.category_name }}
                                         </option>
@@ -38,32 +39,38 @@
                                 <div class="form-floating ">
                                     <input type="text" name="country" class="form-control" id="country"
                                         placeholder="Country" required>
-                                    <label for="country">Country</label>
+                                    <label for="country"><i class="fas fa-plane-arrival p-2"></i> Country</label>
                                 </div>
                                 <div class="form-floating  ">
                                     <input type="text" name="climate" class="form-control" id="climate"
                                         placeholder="Climate" required>
-                                    <label for="climate">Climate</label>
+                                    <label for="climate"><i class="fas fa-temperature-high p-2"></i> Climate</label>
                                 </div>
                                 <div class="form-floating  ">
                                     <input type="text" name="language" class="form-control" id="language"
                                         placeholder="Language" required>
-                                    <label for="language">Language</label>
+                                    <label for="language"><i class="fas fa-language p-2"></i> Language</label>
                                 </div>
                                 <div class="form-floating  ">
                                     <input type="text" name="best_time_to_travel" class="form-control"
                                         id="best_time_to_travel" placeholder="Best time to travel" required>
-                                    <label for="best_time_to_travel">Best time to travel</label>
+                                    <label for="best_time_to_travel"><i class="fas fa-hourglass-half p-2"></i> Best time
+                                        to travel</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="url" class="form-control" name ="destination_image" id="destination_image" placeholder="Destination Image required">
-                                    <label for="destination_image">Destination image URL</label>
+                                    <input type="url" class="form-control" name="destination_image"
+                                        id="destination_image" placeholder="Destination Image "
+                                        pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)(.jpg|.png)"
+                                        required>
+                                    <label for="destination_image"><i class="far fa-images p-2"></i> Destination image
+                                        URL</label>
                                 </div>
                                 <div class="form-floating mb-3">
                                     <textarea class="form-control" name="destination_description"
                                         placeholder="Please describe something about destination"
-                                        id="destination_description" style="height: 100px"></textarea>
-                                    <label for="destination_description">Destination Description</label>
+                                        id="destination_description" style="height: 100px" required></textarea>
+                                    <label for="destination_description"><i class="fas fa-pen-alt p-2"></i> Destination
+                                        Description</label>
                                 </div>
                                 <br>
                                 <!--login button-->
