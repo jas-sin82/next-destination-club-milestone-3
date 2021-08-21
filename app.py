@@ -109,7 +109,7 @@ def profile(username):
 @app.route("/log_out")
 def log_out():
     """
-    remove user from session cookie &
+    remove user from session &
     return to login page
     """
 
@@ -234,6 +234,40 @@ def remove_user_profile(user_id):
     else:
         return redirect(url_for("home_page"))
 
+
+# update destination
+@app.route("/update-destination/<destination_id>", methods=["GET", "POST"])
+def update_destination(destination_id):
+    if session:
+        username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+        destinations = list(mongo.db.destinations.find({"_id": ObjectId(destination_id)}))
+
+        for destination in destinations:
+            user = destination['created_by']
+
+            if username == user:
+                if request.method == "POST":
+                    submit = {
+                        "destination_name": request.form.get("destination_name"),
+                        "category_name": request.form.get("category_name"),
+                        "country": request.form.get("country"),
+                        "climate": request.form.get("climate"),
+                        "language": request.form.get("language"),
+                        "best_time_to_travel": request.form.get("best_time_to_travel"),
+                        "destination_image": request.form.get("destination_image"),
+                        "destination_description": request.form.get(
+                            "destination_description"),
+                        "created_by": session["user"]
+                    }
+                    mongo.db.destinations.update({"_id": ObjectId(destination_id)}, submit)
+                    flash("Destination Successfully Updated")
+                    return redirect(url_for("profile", username=session['user']))
+
+        destination = mongo.db.destinations.find_one({"_id": ObjectId(destination_id)})
+        categories = mongo.db.categories.find().sort("category_name", 1)
+        return render_template("update-destination.html", destination=destination, categories=categories)
+    
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
