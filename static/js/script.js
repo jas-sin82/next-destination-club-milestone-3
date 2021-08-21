@@ -119,7 +119,7 @@ function validateMessage() {
 }
 
 function validateForm() {
-  if (!validateName() || !validatePhone() || !validateEmail() || !validateMessage()) {
+  if (!validateName() ||  !validateEmail() || !validateMessage()) {
     jsShow('submit-error');
     producePrompt('Please fix errors to submit.', 'submit-error', 'red');
     setTimeout(function () {
