@@ -93,7 +93,7 @@ def profile(username):
         username = mongo.db.users.find_one(
             {"username": session["user"]})["username"]
         user_profile = mongo.db.users.find_one({"username": session["user"]})
-        destinations = list(mongo.db.events.find({"created_by": session["user"]}))
+        destinations = list(mongo.db.destinations.find({"created_by": session["user"]}))
     
         if session["user"]:
             return render_template("profile.html", username=username, 
