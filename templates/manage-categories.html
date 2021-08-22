@@ -32,7 +32,7 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Cancel</button>
-                                    <a class="btn btn-primary " href="">Delete</a>
+                                    <a class="btn btn-primary " href="{{ url_for('remove_category', category_id=category._id) }}" >Delete</a>
                                 </div>
                             </div>
                         </div>

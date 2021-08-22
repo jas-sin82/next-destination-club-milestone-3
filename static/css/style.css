@@ -220,7 +220,7 @@ html {
     margin-top: 10px;
     background-color: white;
     color: orangered;
-    
+
 
 }
 
@@ -475,14 +475,16 @@ textarea {
     font-family: 'Playfair Display SC', serif;
     text-decoration: none;
 }
+
 .edit-profile-1 {
     color: yellow;
     font-size: 20px;
     font-family: 'Playfair Display SC', serif;
     text-decoration: none;
 }
-.edit-profile-1:hover{
-    color:white;
+
+.edit-profile-1:hover {
+    color: white;
 }
 
 
@@ -508,6 +510,7 @@ textarea {
     font-family: 'Playfair Display SC', serif;
 
 }
+
 .show-text-2 {
     color: black;
     font-size: large;
@@ -515,8 +518,9 @@ textarea {
     font-weight: 400;
     text-decoration: none;
 }
+
 .delete-profile-1 {
-  
+
     font-family: 'Playfair Display SC', serif;
     text-decoration: none;
 }
@@ -561,6 +565,12 @@ textarea {
 }
 
 
+/*destination page */
+
+.directions:hover {
+    font-size: 20px;
+
+}
 
 
 
