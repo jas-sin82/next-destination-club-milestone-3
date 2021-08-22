@@ -93,6 +93,9 @@ html {
     margin-top: 10px;
 
 }
+.overlay-items ul li{
+    list-style: none;
+}
 
 .overlay-menu a {
     font-size: 30px;
@@ -572,7 +575,12 @@ textarea {
 
 }
 
+/*read-more page*/
 
+.fa-umbrella-beach{
+    color:yellow;
+    font-size:30px;
+}
 
 
 
