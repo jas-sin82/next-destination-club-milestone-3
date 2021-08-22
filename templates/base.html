@@ -31,40 +31,42 @@
             <div class="close-button" onclick="closeMenu()">
                 <i class="fas fa-times"></i>
             </div>
+            <!--nav links-->
             <div class="overlay-items">
                 <ul>
                     <li><a href="{{ url_for('home_page') }}"><i class="fas fa-home"></i> Home</a></li>
                     {% if session.user %}
-                    <li><a href="{{ url_for('get_destinations') }}"><i class="fas fa-map-marker-alt"></i>
-                            Destinations</a></li>
-                    <li><a href="{{ url_for('add_destination') }}"><i class="fas fa-marker"></i> Add Destination</a>
-                    </li>
-                    <li><a href="{{ url_for('profile', username=session['user']) }}"><i class="fas fa-users"></i>
-                            Profile</a></li>
+                        <li><a href="{{ url_for('get_destinations') }}"><i class="fas fa-map-marker-alt"></i>
+                        Destinations</a></li>
+                        <li><a href="{{ url_for('add_destination') }}"><i class="fas fa-marker"></i> Add Destination</a>
+                        </li>
+                        <li><a href="{{ url_for('profile', username=session['user']) }}"><i class="fas fa-users"></i>
+                        Profile</a></li>
                     {% if session.user|lower == "admin"|lower %}
-                    <li><a href="{{ url_for('get_categories') }}"><i class="fas fa-user-shield"></i> Manage
-                            Categories</a></li>
+                        <li><a href="{{ url_for('get_categories') }}"><i class="fas fa-user-shield"></i> Manage
+                        Categories</a></li>
                     {% endif %}
-                    <li><a href="{{ url_for('log_out') }}"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
+                        <li><a href="{{ url_for('log_out') }}"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
                     {% else %}
-                    <li><a href="{{ url_for('register') }}"><i class="fas fa-user-plus"></i> Register</a></li>
-                    <li><a href="{{ url_for('log_in') }}"><i class="fas fa-sign-in-alt"></i> Log in</a></li>
+                        <li><a href="{{ url_for('register') }}"><i class="fas fa-user-plus"></i> Register</a></li>
+                        <li><a href="{{ url_for('log_in') }}"><i class="fas fa-sign-in-alt"></i> Log in</a></li>
                     {% endif %}
                     <li><a href="{{ url_for('contact_page') }}"><i class="far fa-envelope"></i> Contact</a></li>
                 </ul>
             </div>
         </div>
     </header>
+    <!--flash messages section-->
     <section>
         <div class="container fl-message">
             <div class="row">
                 <div class="col-12 text-center">
                     {% with messages = get_flashed_messages() %}
-                    {% if messages %}
-                    {% for message in messages %}
-                    <h4>{{ message }}</h4>
-                    {% endfor %}
-                    {% endif %}
+                        {% if messages %}
+                           {% for message in messages %}
+                               <h4>{{ message }}</h4>
+                            {% endfor %}
+                        {% endif %}
                     {% endwith %}
                 </div>
             </div>
