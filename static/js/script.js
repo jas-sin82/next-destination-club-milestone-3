@@ -46,6 +46,8 @@ function sendMail(contactForm) {
 
 }
 
+/* email submit successfully function */
+
 function emailSuccess() {
   swal({
     title: "Great!",
@@ -55,7 +57,7 @@ function emailSuccess() {
   });
 }
 
-/* form Validation code taken from https://stackoverflow.com/questions/24128659/contact-form-validation-javascript */
+/* contact form / Validation code taken from https://stackoverflow.com/questions/24128659/contact-form-validation-javascript */
 
 function validateName() {
 
@@ -137,8 +139,6 @@ function jsShow(id) {
 function jsHide(id) {
   document.getElementById(id).style.display = 'none';
 }
-
-
 
 
 function producePrompt(message, promptLocation, color) {
