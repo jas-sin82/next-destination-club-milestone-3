@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-
+<!--heading and search input-->
 <h1 class="profile-name mb-5 text-center"> Best Destinations</h1>
 <section>
     <div class="container">
@@ -16,6 +16,7 @@
                 </div>
             </form>
         </div>
+        <!--get destinations-->
         {% if destinations|length > 0 %}
         <div class="row">
             {% for destination in destinations %}
