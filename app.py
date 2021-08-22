@@ -291,7 +291,7 @@ def remove_destination(destination_id):
 
 
 #retrieve categories
-@app.route("/categories")
+@app.route("/get_categories")
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("manage-categories.html", categories=categories)
@@ -330,6 +330,18 @@ def update_category(category_id):
 
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     return render_template("edit-categories.html", category=category)
+
+
+# delete category
+@app.route("/remove_category/<category_id>")
+def remove_category(category_id):
+    try:
+        mongo.db.categories.remove({"_id": ObjectId(category_id)})
+        flash("Category Successfully Deleted")
+    except:   
+        return redirect(url_for("get_categories"))
+    
+    return redirect(url_for("get_categories"))
 
 
 if __name__ == "__main__":
