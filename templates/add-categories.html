@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+<!--add category heading-->
 <section>
     <div class="container">
         <div class="row">
@@ -10,6 +11,7 @@
                     to add more holiday categories!
                 </p>
             </div>
+            <!--Add category form-->
             <div class="row">
                 <form class="col-sm-12 col-md-8 col-lg-6  offset-md-2 offset-lg-3 mt-5 mb-5 add-destination-form"
                     method="POST" action="{{ url_for('add_category') }}">
@@ -26,7 +28,7 @@
                                 <div class="d-grid mb-3 mt-3">
                                     <button class="btn btn-primary" type="submit">Submit</button>
                                 </div>
-                                <p class="mt-2 text-sm"> I change my mind! I dont want add new  category?
+                                <p class="mt-2 text-sm"> I have changed my mind! I dont want add new  category?
                                     <a href="{{ url_for('get_categories') }}">Back to categories
                                         page</a>
                                 </p>
