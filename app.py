@@ -287,7 +287,16 @@ def remove_destination(destination_id):
          
 
         return redirect(url_for("profile", username=session['user']))
-     
+
+
+
+#retrieve categories
+@app.route("/categories")
+def get_categories():
+    categories = list(mongo.db.categories.find().sort("category_name", 1))
+    return render_template("manage-categories.html", categories=categories)
+ 
+ 
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
