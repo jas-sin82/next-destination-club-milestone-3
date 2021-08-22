@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 class="profile-name mb-5 text-center"> Manage Categories </h1>
+
+    <div class="container">
+        {% for category in categories %}
+        <div class="row">
+            <div class=" col-lg-3 col-md-6 ">
+                <div class=" card  card-body mb-5">
+                    <h3 class="text-center">{{ category.category_name }}</h3>
+                    <a class="btn btn-primary mt-2 " href=""><i class="fas fa-user-edit"></i> Edit category</a>
+                    <a class="delete-profile-1 btn btn-secondary mt-2" href="" data-bs-toggle="modal"
+                        data-bs-target="#delete-category"> <i class="fas fa-trash-alt"></i> Delete
+                        Category</a>
+                    <!-- warning mesasge & delete button -->
+                    <div class="modal fade" id="delete-category" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Remove category</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Are you sure ! You want to delete this category ? </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancel</button>
+                                    <a class="btn btn-primary " href="">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
