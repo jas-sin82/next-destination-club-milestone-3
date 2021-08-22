@@ -11,9 +11,9 @@
                     share your dream holidays destination around the world!
                 </p>
                 {% if session.user %}
-                <a class="btn home-page-button" href="{{ url_for('add_destination') }}">Add destination</a>
+                    <a class="btn home-page-button" href="{{ url_for('add_destination') }}">Add destination</a>
                 {% else %}
-                <a class="btn home-page-button" href="{{url_for('register')}}">Register</a>
+                    <a class="btn home-page-button" href="{{url_for('register')}}">Register</a>
                 {% endif %}
             </div>
             <div class="col-lg-6">
@@ -72,12 +72,11 @@
                 </div>
             </div>
             <div class="col-lg-5 next-dest-5 next-dest-media-4 ">
-                <h4 class="next-dest-2"> Some of the Best Beaches in the world.. </h4>
-                <p class="next-dest-3"> Maldives,Mauritius & Bahamas!
+                <h4 class="next-dest-2"> Some of the Best  Holiday destinations in the world.. </h4>
+                <p class="next-dest-3"> Maldives,Mauritius & Bahamas! Many more,login to see more stunning destinations.
                 </p>
             </div>
         </div>
     </div>
 </section>
-
 {% endblock %}
