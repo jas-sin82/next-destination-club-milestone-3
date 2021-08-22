@@ -93,7 +93,8 @@ html {
     margin-top: 10px;
 
 }
-.overlay-items ul li{
+
+.overlay-items ul li {
     list-style: none;
 }
 
@@ -577,18 +578,19 @@ textarea {
 
 /*read-more page*/
 
-.fa-umbrella-beach{
-    color:yellow;
-    font-size:30px;
+.fa-umbrella-beach {
+    color: yellow;
+    font-size: 30px;
 }
 
 /*update destination */
-.url-message{
-    font-size:14px;
+
+.url-message {
+    font-size: 14px;
     font-style: italic;
 }
 
-/*media query --------*/
+/*media query for whole project--------*/
 
 @media (max-width: 1300px) {
     .next-dest-media-3 {
