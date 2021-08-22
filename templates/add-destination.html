@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<!--add destination-->
+<!--heading-->
 <section>
     <div class="container-fluid ">
         <div class="row">
@@ -12,6 +12,7 @@
                     & share with others.
                 </p>
             </div>
+            <!--add destination input form-->
             <div class="row">
                 <form class="col-sm-12 col-md-8 col-lg-6  offset-md-2 offset-lg-3 mt-5 mb-5 add-destination-form"
                     method="POST" action="{{ url_for('add_destination') }}">
@@ -73,7 +74,7 @@
                                         Description</label>
                                 </div>
                                 <br>
-                                <!--login button-->
+                                <!--submit button-->
                                 <div class="d-grid mb-3">
                                     <button class="btn btn-primary" type="submit">Submit</button>
                                 </div>
@@ -84,5 +85,4 @@
             </div>
         </div>
 </section>
-
 {% endblock %}
