@@ -1,5 +1,5 @@
 import os
-from flask import (
+from flask import(
     Flask, flash, render_template, 
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
@@ -18,18 +18,16 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-#Homepage
+# Homepage
 @app.route("/")
 @app.route("/home_page")
-def home_page():
-  
+def home_page(): 
     return render_template("index.html")
 
 
-#read-more page 
+# read-more page 
 @app.route("/read_more")
 def read_more():
-  
     return render_template("read-more.html")
 
 
@@ -76,7 +74,7 @@ def log_in():
                         request.form.get("username")))
                     return redirect(url_for(
                         "profile", username=session["user"]))
-            
+                        
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -100,7 +98,8 @@ def profile(username):
         username = mongo.db.users.find_one(
             {"username": session["user"]})["username"]
         user_profile = mongo.db.users.find_one({"username": session["user"]})
-        destinations = list(mongo.db.destinations.find({"created_by": session["user"]}))
+        destinations = list(mongo.db.destinations.find(
+            {"created_by": session["user"]}))
     
         if session["user"]:
             return render_template("profile.html", username=username, 
@@ -112,7 +111,7 @@ def profile(username):
     return redirect(url_for("log_in"))
 
 
-#log out
+# log out
 @app.route("/log_out")
 def log_out():
     """
@@ -129,18 +128,19 @@ def log_out():
 @app.route("/get_destinations")
 def get_destinations():
     if session:
-        destinations = list(mongo.db.destinations.find().sort("destination_name", 1))
+        destinations = list(mongo.db.destinations.find(
+            ).sort("destination_name", 1))
         return render_template("destinations.html", destinations=destinations)
     else:
         return redirect(url_for("home_page"))
-
 
 
 # singel destination page
 @app.route("/destination/<destination_id>", methods=['GET'])
 def single_destination_page(destination_id):
     try:
-        destination = mongo.db.destinations.find_one({"_id": ObjectId(destination_id)})
+        destination = mongo.db.destinations.find_one(
+            {"_id": ObjectId(destination_id)})
         return render_template("one-destination.html", destination=destination)
     except:
         return redirect(url_for("home_page"))
@@ -154,12 +154,12 @@ def contact_page():
     return render_template("contact.html")
 
 
-
 # destination search 
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
-    destinations = list(mongo.db.destinations.find({"$text": {"$search": query}}))
+    destinations = list(mongo.db.destinations.find(
+        {"$text": {"$search": query}}))
     return render_template("destinations.html", destinations=destinations)
 
 
@@ -191,8 +191,7 @@ def add_destination():
         return redirect(url_for("home_page"))
 
 
-
-#edit profile
+# edit profile
 @app.route("/edit-profile/<user_id>", methods=["GET", "POST"])
 def edit_profile(user_id):
     if session:
@@ -214,7 +213,8 @@ def edit_profile(user_id):
                     mongo.db.users.update(
                         {"_id": ObjectId(user_id)}, update_profile)
                     flash("Profile Updated")
-                    return redirect(url_for("profile", username=session['user']))
+                    return redirect(url_for(
+                        "profile", username=session['user']))
            
     else:
         return redirect(url_for("home_page"))
@@ -222,7 +222,7 @@ def edit_profile(user_id):
     return render_template("edit-profile.html", user=user)
 
 
-#remove profile
+# remove profile
 @app.route("/remove-user-profile/<user_id>")
 def remove_user_profile(user_id):
     if session:
@@ -234,7 +234,8 @@ def remove_user_profile(user_id):
             username = user['username']
 
             if session_user == username:
-                mongo.db.destinations.delete_many({"created_by": session["user"]})
+                mongo.db.destinations.delete_many(
+                    {"created_by": session["user"]})
                 mongo.db.users.delete_one({"_id": ObjectId(user_id)})
                 session.pop("user")
                 return redirect(url_for("home_page"))
@@ -249,7 +250,8 @@ def update_destination(destination_id):
     if session:
         username = mongo.db.users.find_one(
             {"username": session["user"]})["username"]
-        destinations = list(mongo.db.destinations.find({"_id": ObjectId(destination_id)}))
+        destinations = list(mongo.db.destinations.find(
+            {"_id": ObjectId(destination_id)}))
 
         for destination in destinations:
             user = destination['created_by']
@@ -257,47 +259,58 @@ def update_destination(destination_id):
             if username == user:
                 if request.method == "POST":
                     submit = {
-                        "destination_name": request.form.get("destination_name"),
-                        "category_name": request.form.get("category_name"),
-                        "country": request.form.get("country"),
-                        "climate": request.form.get("climate"),
-                        "language": request.form.get("language"),
-                        "best_time_to_travel": request.form.get("best_time_to_travel"),
-                        "destination_image": request.form.get("destination_image"),
+                        "destination_name": request.form.get(
+                            "destination_name"),
+                        "category_name": request.form.get(
+                            "category_name"),
+                        "country": request.form.get(
+                            "country"),
+                        "climate": request.form.get(
+                            "climate"),
+                        "language": request.form.get(
+                            "language"),
+                        "best_time_to_travel": request.form.get(
+                            "best_time_to_travel"),
+                        "destination_image": request.form.get(
+                            "destination_image"),
                         "destination_description": request.form.get(
                             "destination_description"),
                         "created_by": session["user"]
                     }
-                    mongo.db.destinations.update({"_id": ObjectId(destination_id)}, submit)
+                    mongo.db.destinations.update(
+                        {"_id": ObjectId(destination_id)}, submit)
                     flash("Destination Successfully Updated")
-                    return redirect(url_for("profile", username=session['user']))
+                    return redirect(url_for(
+                        "profile", username=session['user']))
 
-        destination = mongo.db.destinations.find_one({"_id": ObjectId(destination_id)})
+        destination = mongo.db.destinations.find_one(
+            {"_id": ObjectId(destination_id)})
         categories = mongo.db.categories.find().sort("category_name", 1)
-        return render_template("update-destination.html", destination=destination, categories=categories)
+        return render_template("update-destination.html",
+            destination=destination, categories=categories)
 
 
- # remove destination
+# remove destination
 @app.route("/remove-destination/<destination_id>")
 def remove_destination(destination_id):
     if session:
         username = mongo.db.users.find_one(
             {"username": session["user"]})["username"]
-        destinations = list(mongo.db.destinations.find({"_id": ObjectId(destination_id)}))
+        destinations = list(mongo.db.destinations.find(
+            {"_id": ObjectId(destination_id)}))
 
         for destination in destinations:
             user = destination['created_by']
 
             if username == user:
-                mongo.db.destinations.delete_one({"_id": ObjectId(destination_id)})
+                mongo.db.destinations.delete_one(
+                    {"_id": ObjectId(destination_id)})
                 flash("Destination Successfully Deleted")
          
-
         return redirect(url_for("profile", username=session['user']))
 
 
-
-#retrieve categories
+# retrieve categories
 @app.route("/get_categories")
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
