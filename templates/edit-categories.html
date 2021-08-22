@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-
+<!--heading-->
 <section>
     <div class="container ">
         <div class="row">
             <div class="col-12 text-center holiday-desti mt-2">
                 <h1> Update your holiday Category</h1>
             </div>
+            <!--edit categories form-->
             <div class="row">
                 <form class="col-sm-12 col-md-8 col-lg-6  offset-md-2 offset-lg-3 mt-5 mb-5 add-destination-form"
                     method="POST" action="{{ url_for('update_category', category_id=category._id) }}">
@@ -15,8 +16,8 @@
                             <div class="row">
                                 <h4 class=" mb-5 mt-3 text-center  holiday-desti-1 "> Next Destination Club </h4>
                                 <div class="form-floating ">
-                                    <input type="text" name="category_name" class="form-control"
-                                        id="category_name" value="{{ category.category_name }}" placeholder="Category Name" required>
+                                    <input type="text" name="category_name" class="form-control" id="category_name"
+                                        value="{{ category.category_name }}" placeholder="Category Name" required>
                                     <label for="category_name"><i class="fas fa-map-marker-alt p-2"></i> Category
                                         Name</label>
                                 </div>
@@ -34,6 +35,5 @@
             </div>
         </div>
     </div>
-</section> 
-
+</section>
 {% endblock %}
