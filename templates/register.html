@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<!--registration form-->
+<!--registration heading-->
 <section>
     <div class="container main-heading">
         <div class="row">
@@ -8,6 +8,7 @@
                 <h1 class="text-center regi-center ">Register</h1>
             </div>
         </div>
+        <!--registration form-->
         <div class="row">
             <form class="col-sm-12 col-md-8 offset-md-2" method="POST" action="{{ url_for('register') }}">
                 <div class="card">
