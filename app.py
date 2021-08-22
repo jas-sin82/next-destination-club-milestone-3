@@ -296,7 +296,26 @@ def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("manage-categories.html", categories=categories)
  
- 
+
+# add categories
+@app.route("/add_category", methods=["GET", "POST"])
+def add_category():
+    if request.method == "POST":
+        categories = mongo.db.categories.find()
+        new_category = request.form.get("category_name").capitalize()
+        for category in categories:
+            if category["category_name"] == new_category:
+                flash("Category already exists")
+                return redirect(url_for("add_category"))
+        category = {
+            "category_name": request.form.get("category_name").capitalize()
+        }
+        mongo.db.categories.insert_one(category)
+        flash("New Category Added")
+        return redirect(url_for("get_categories"))
+
+    return render_template("add-categories.html") 
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
