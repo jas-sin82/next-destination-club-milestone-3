@@ -582,7 +582,11 @@ textarea {
     font-size:30px;
 }
 
-
+/*update destination */
+.url-message{
+    font-size:14px;
+    font-style: italic;
+}
 
 /*media query --------*/
 
