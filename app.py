@@ -302,13 +302,13 @@ def get_categories():
 def add_category():
     if request.method == "POST":
         categories = mongo.db.categories.find()
-        new_category = request.form.get("category_name").capitalize()
+        new_category = request.form.get("category_name")
         for category in categories:
             if category["category_name"] == new_category:
                 flash("Category already exists")
                 return redirect(url_for("add_category"))
         category = {
-            "category_name": request.form.get("category_name").capitalize()
+            "category_name": request.form.get("category_name")
         }
         mongo.db.categories.insert_one(category)
         flash("New Category Added")
@@ -335,12 +335,8 @@ def update_category(category_id):
 # delete category
 @app.route("/remove_category/<category_id>")
 def remove_category(category_id):
-    try:
-        mongo.db.categories.remove({"_id": ObjectId(category_id)})
-        flash("Category Successfully Deleted")
-    except:   
-        return redirect(url_for("get_categories"))
-    
+    mongo.db.categories.remove({"_id": ObjectId(category_id)})
+    flash("Category Successfully Deleted")
     return redirect(url_for("get_categories"))
 
 
