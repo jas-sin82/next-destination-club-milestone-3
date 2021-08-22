@@ -37,7 +37,9 @@
                     <a href="{{ url_for('get_destinations') }}"><i class="fas fa-map-marker-alt"></i> Destinations</a>
                     <a href="{{ url_for('add_destination') }}"><i class="fas fa-marker"></i> Add Destination</a>
                     <a href="{{ url_for('profile', username=session['user']) }}"><i class="fas fa-users"></i> Profile</a>
-                    <a href="#">Manage Categories</a>
+                    {% if session.user|lower == "admin"|lower %}
+                        <a href="{{ url_for('get_categories') }}">Manage Categories</a>
+                    {% endif %}    
                     <a href="{{ url_for('log_out') }}"><i class="fas fa-sign-out-alt"></i> Log out</a>
                 {% else %}    
                     <a href="{{ url_for('register') }}"><i class="fas fa-user-plus"></i> Register</a>
@@ -79,6 +81,9 @@
                         <li class="footer-links"> <a href="{{ url_for('get_destinations') }}"><i class="fas fa-map-marker-alt"></i> Destinations</a></li>
                         <li class="footer-links"> <a href="{{ url_for('add_destination') }}"><i class="fas fa-marker"></i> Add Destination</a></li>
                         <li class="footer-links"> <a href="{{ url_for('profile', username=session['user']) }}"><i class="fas fa-users"></i> Profile</a></li>
+                        {% if session.user|lower == "admin"|lower %}
+                            <a href="{{ url_for('get_categories') }}">Manage Categories</a>
+                        {% endif %}  
                         <li class="footer-links"> <a href="{{ url_for('log_out') }}"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
                     {% else %}
                         <li class="footer-links"> <a href="{{ url_for('register') }}"><i class="fas fa-user-plus"></i> Register</a></li>
