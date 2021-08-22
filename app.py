@@ -26,6 +26,13 @@ def home_page():
     return render_template("index.html")
 
 
+#read-more page 
+@app.route("/read_more")
+def read_more():
+  
+    return render_template("read-more.html")
+
+
 # register user
 @app.route("/register", methods=["GET", "POST"])
 def register():
