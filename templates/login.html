@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+<!--heading-->
 <section>
     <div class="container main-heading">
         <div class="row">
@@ -7,6 +8,7 @@
                 <h1 class="text-center regi-center ">Log In</h1>
             </div>
         </div>
+        <!--login form-->
         <div class="row">
             <form class="col-sm-12 col-md-8 offset-md-2" method="POST" action="{{ url_for('log_in') }}">
                 <div class="card">
