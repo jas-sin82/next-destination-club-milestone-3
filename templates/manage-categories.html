@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
+<!--heading add category and link-->
 <h1 class="profile-name mb-5 text-center"> Manage Categories <br>
     <a href="{{ url_for('add_category') }}" class="edit-profile text-cente mt-2 mb-2"><i class="fas fa-marker"></i>
         Add Category</a> </h1>
+<!--all category section-->
 <section>
     <div class="container">
         <div class="row">
@@ -10,13 +12,14 @@
             <div class=" col-lg-3 col-md-6 ">
                 <div class=" card  card-body mb-5">
                     <h5 class="text-center">{{ category.category_name }}</h5>
+                    <!--edit category button-->
                     <a class="btn btn-primary mt-2 "
                         href="{{ url_for('update_category', category_id=category._id) }}"><i
                             class="fas fa-user-edit"></i> Edit category</a>
+                    <!-- warning mesasge & delete button -->
                     <a class="delete-profile-1 btn btn-secondary mt-2" href="" data-bs-toggle="modal"
                         data-bs-target="#delete-category"> <i class="fas fa-trash-alt"></i> Delete
                         Category</a>
-                    <!-- warning mesasge & delete button -->
                     <div class="modal fade" id="delete-category" data-bs-backdrop="static" data-bs-keyboard="false"
                         tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -32,7 +35,9 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Cancel</button>
-                                    <a class="btn btn-primary " href="{{ url_for('remove_category', category_id=category._id) }}" >Delete</a>
+                                    <!--final delete button-->    
+                                    <a class="btn btn-primary "
+                                        href="{{ url_for('remove_category', category_id=category._id) }}">Delete</a>
                                 </div>
                             </div>
                         </div>
