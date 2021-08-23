@@ -590,7 +590,61 @@ textarea {
     font-style: italic;
 }
 
+/*search-box*/
+
+.main-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box {
+    width: 60%;
+    height: 55px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #f0f3ff;
+    align-items: center;
+    border-radius: 55px;
+    box-shadow: 6px 6px 10px -1px rgb(0, 0, 0, 0.5),
+        -6px -6px 10px -1px rgb(255, 255, 255, 0.7);
+}
+
+.search-text {
+    width: 500px;
+    outline: none;
+    background: transparent;
+    font-size: 18px;
+    border: 0;
+    border-style: none;
+    border-color: none;
+
+
+}
+
+.searchbtn {
+    width: 3rem;
+    height: 3rem;
+    background-color: #192a56;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+
+
+}
+
+.form-control:focus {
+    color: none;
+    background-color: transparent;
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+}
+
 /*media query for whole project--------*/
+
 
 @media (max-width: 1300px) {
     .next-dest-media-3 {
@@ -759,6 +813,9 @@ textarea {
 
         padding-left: 10px;
         padding-right: 40px
+    }
+    .search-box {
+        width:80%;
     }
 }
 
