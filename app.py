@@ -355,11 +355,11 @@ def update_category(category_id):
 # delete category
 @app.route("/remove_category/<category_id>")
 def remove_category(category_id):
-    mongo.db.categories.remove({"_id": ObjectId(category_id)})
+    mongo.db.categories.delete_one({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted")
     return redirect(url_for("get_categories"))
-
-
+    
+    
 # Error Handlers
 @app.errorhandler(401)
 def authorization_error(e):
@@ -369,7 +369,6 @@ def authorization_error(e):
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template("404.html"), 404
-
 
 
 if __name__ == "__main__":
