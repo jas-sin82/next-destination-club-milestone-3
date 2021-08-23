@@ -576,6 +576,10 @@ textarea {
 
 }
 
+img.main-cards {
+    height: 215px;
+}
+
 /*read-more page*/
 
 .fa-umbrella-beach {

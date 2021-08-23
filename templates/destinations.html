@@ -21,8 +21,8 @@
         <div class="row">
             {% for destination in destinations %}
             <div class=" col-lg-4 col-md-6">
-                <div class=" card card-body mb-5  ">
-                    <img src="{{ destination.destination_image }}" class="card-img-top " alt="text">
+                <div class=" card card-body mb-5 card-size  ">
+                    <img src="{{ destination.destination_image }}" class=" main-cards card-img-top " alt="text">
                     <a class="text-center show-text-2 mt-3 directions"
                         href="{{url_for('single_destination_page', destination_id=destination._id)}}">
                         {{ destination.destination_name }} <i class="fas fa-directions"></i> </a>
