@@ -643,6 +643,42 @@ textarea {
     box-shadow: none;
 }
 
+/*----------error page------*/
+
+.error_page {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.error-page {
+    color: white;
+
+}
+
+.error-page>h2 {
+    padding-bottom: 10px;
+}
+
+.error-page h1 {
+    font-size: 100px;
+    letter-spacing: 6px;
+}
+
+.error-page p {
+    font-size: large;
+    padding-bottom: 25px;
+}
+
+.error-page a {
+    color: yellow;
+}
+
+
+
 /*media query for whole project--------*/
 
 
