@@ -383,7 +383,57 @@ This project presents a Holidays destiantions call Next destination Club. This i
    
    * Second option is you can [Clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)
      or [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repository ([Milestone Project 3](https://github.com/jas-sin82/next-destination-club-milestone-3)) into your github account.
+
+## Heroku
+
+  This project is live and automatically deployed to Heroku. The following steps outline the necessary steps to set-up and deploy a project that uses Python alongside MongoDB.
   
+  * Before deploying your project create a requirements.txt file by running the following command in the CLI
+
+         pip3 freeze --local > requirements.txt
+
+   * Create a Procfile file by running the following command in the CLI
+
+         echo web: python app.py > Procfile 
+
+   * Once theses files have been correctly created commit and push these to your GitHub repository.
+
+   * Create an account/log in to your Heroku account.
+
+   * select "New App"
+
+     ![screenshot](static/wireframes/heroku.png)
+
+
+   * write your project name (make sure it must be unique ) and select your region, and then click "Create app.
+
+
+     ![screenshot](static/wireframes/heroku-2.png)
+
+   * You will directly to the deploy screen for your project.To connect directly to your GitHub repository select the deployment
+     method ( Git Hub conncect to Git Hub)
+     
+
+      ![screenshot](static/wireframes/heroku-3.png)
+
+   * After you connected to your repository, click on "Settings" tab on your app dashboard, and click on "Reveal Config Vars"  
+     add your configuration variables to Heroku.
+
+   * Then back to the deploy tab and select "Enable Automatic Deploys" and from Manual deploy choose your master branch, and click "Deploy Branch
+
+      ![screenshot](static/wireframes/heroku-4.png)
+
+  *  Success message will appear your app is successfully deployed, to live view click on View.
+
+  
+
+
+     
+
+    
+
+     
+
 
 
 
