@@ -283,7 +283,7 @@ This project presents a Holidays destiantions call Next destination Club. This i
 
 # Technology used in a Project
 
-  ## Syntax
+  ## Frameworks, Libraries & Programs
 
    * HTML5 
       
@@ -297,10 +297,66 @@ This project presents a Holidays destiantions call Next destination Club. This i
      
       * Java script used for full screen overlay navigation menu and contact form validation.
 
+   * Python 
+
+      * Python is an interpreted high-level general-purpose programming language. Used to write the logic that operates the site.
+
    * Emailjs 
     
-      * 
+      * EmailJS is a allows for the sending of emails directly from JavaScript without the need for any backend code. Here is link emailjs
 
+   * Bootstrap 5 & Media Query
+    
+      * To make it responsive on all the devices such as Desktop , Ipad and Mobile.
+
+   * Flask 
+    
+       * framework used to create and populate the templates.
+
+   * Jinja 
+
+       * Jinja templating language used to simplify and display backend data in html.
+
+   * PyMongo 
+
+       * flask_pymongo used for interacting with MongoDB database from Python.
+
+   * Google Font
+    
+      * To make structure beautiful.
+
+   * Github
+     
+     * Used to store the projects code after being pushed from Git.
+
+   * Git 
+
+     * used for version control to commit to Git and push to Heroku.
+
+   * Gitpod 
+
+     * Used as code editor to create my project.
+
+   *  Font Awesome
+
+      * Used to display icons as well as the social media icons in the footer.
+
+   * Favicon
+
+     * Used to generate the websites favicon logo of various sizes for different devices.
+
+  *  Balsamiq 
+
+     * I used a balsamiq to create a wireframe
+
+  *  Heroku
+
+     * Cloud platform used to deploy application.
+
+  *  W3C Validator HTML & W3C Validator CSS
+
+     * Both used to test all the code for the project to check for valid HTML and CSS.
+     
 
 
 
