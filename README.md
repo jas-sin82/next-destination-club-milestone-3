@@ -193,6 +193,85 @@ This project presents a Holidays destiantions call Next destination Club. This i
 
      ![screenshot](static/wireframes/database.png)
 
+   * Destionations :- All the destination created by user will be saved safely in database! 
+
+     ![screenshot](static/wireframes/database-2.png)
+
+
+   * User Data :- user name & password will be securely save in user collection ( by using Werkzeug Security password hash).
+   
+      [Back to Highlights ](#highlights)
+
+# Features
+
+  ## Existing Features
+
+  
+  Every page of the website features a consistently responsive and intuitive layout and navigational system:
+
+  
+### General features
+
+  * full page overlay navigation which will open once click on menu icon from left to right and to close click on cross icon.
+
+  *  All the webpages are fullt responsive on all devices.
+
+  *  Footer will seen on all the pages on left side next destination logo, and rest it contains nav links and social links as well.
+ 
+  *  full page overlay nav fully responsive on all devices.
+
+  *  All the image cards and text are fully responsive.
+
+  *  User or Visitor can contact author  via contact form! which is available for every one both first time visitors or to existing User.
+
+  *  Search functionality which will help to find destination by destination name and country name.
+
+### Home page 
+
+  * Home page contains some beautiful images  and color combination will attract user.
+
+  * Two buttons on home page ! on top lef button will lead visitors to registration page so visitor can create account and other button will lead to connecting 
+    page of the next holiday destination where able to see some more best destinations and with external links of holiday webpage.
+
+### register account 
+
+  *  Here Visitors are able to create their account by follow the account create instructiion which is provided under the each input.
+
+  *  Once user register! page will redirect to profile page and will show welcome message.
+
+### Destination Page 
+
+  * Destination page where all the added destiantion will appear so all exisitng user can see them and can search by destination name.
+
+  * User can independently walk around and read other users destionation.
+
+### Add destination page 
+
+  * Once user has registered on Next destination club so they are able to add own destination by fill up the add destination form step by step.
+
+  * Once user succesfully added destination , will get flash message on top and will redirect to destination page.
+
+  * User need to fill the add destination form completely with proper information ! cant skip any input empty.
+
+### Profile page 
+
+  * Here is place where user  can independently play around ! I mean user can edit and delete their profile as their wish ,not just profile 
+    user is able to delete , edit , create new destination as well. 
+
+  * Every time when user want do delete process! will get one warning message before delete , which will make user to change their mind and 
+    go back with out remove.
+
+### Login page and logout page 
+
+  * Once user login  in their account it will redirect to profile page where user can add their destination and delete ,edit,or update user 
+    information.
+  
+  *  Once User logout it will redirect user to login page and will get flash message!  for security purpose message will appear on top 
+     (user has succesfully log out).
+
+
+
+
 
      
      

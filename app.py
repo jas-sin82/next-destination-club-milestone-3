@@ -156,6 +156,7 @@ def contact_page():
 
     return render_template("contact.html")
 
+
 # destination search 
 @app.route("/search", methods=["GET", "POST"])
 def search():
