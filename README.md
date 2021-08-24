@@ -35,6 +35,8 @@ This project presents a Holidays destiantions call Next destination Club. This i
 
         * [Icons](#icons)
 
+    * [Database Model](#database-model) 
+
     * [Features](#features)
 
     * [Technology used in a Project](#technology-used-in-a-Project)
@@ -140,12 +142,61 @@ This project presents a Holidays destiantions call Next destination Club. This i
 
 ### I used a balsamiq to create a wireframe. Here is link [balsamiq](https://www.balsamiq.com/)
        
- [Home page](static/wireframes/New.project-1.pdf) 
+ ![screenshot](static/wireframes/wireframe-1.png) 
   
- [Add Destination](static/wireframes/New.project-2.pdf) 
+ ![screenshot](static/wireframes/wireframe-2.png) 
 
- [Destination](static/wireframes/New.project-3.pdf)
+ ![screenshot](static/wireframes/wireframe-3.png)
 
 
  [Back to Highlights ](#highlights)
+
+# Design 
+
+  * Colors 
+
+    * Themecolor of the webpage is bit much same as sea blue #1A2980,  #26D0CE, #1A2980 ,which I think is good for user intraction and 
+      I have placed two buttons on the home page color of orange text and white background.The main purpose of this background color  
+      is to make user intraction above. 
+    
+    *  Most of the webpage text has written in white and yellow color which create nice combination with background color  #1A2980,  
+       #26D0CE, #1A2980 and make webpage more user intractive. The color blue has positive affects on the mind and the body.
+       As the color of the spirit.
+
+    *  Blue represents both the sky and the sea, and is associated with open spaces, freedom, intuition, imagination, expansiveness,' inspiration, and sensitivity.
+       Blue also represents meanings of depth, trust, loyalty, sincerity, wisdom, confidence, stability, faith, heaven, and intelligence.
+      
+  * Typography 
+
+    * There will be two fonts used throughout the website. Roboto , Playfair Display SC and Serif specific so that will be used for the fall back font,
+      Playfair Display SC font used in  webpage headings and Logo to make more user intractive.
+
+  * Imagery
+
+    * Choices of the images is an important component of this site. I chose clean images that will intract Visitors. Three images at the home page to catch the visitors    
+      intrerest and strategically add bootstrap carousel which contains three stunning beach images  which will help to attract visitors to look more in side webpage.
+
+    * Navigation overlay menu bar which cover whole screen ! one of the big user attrative design.
+
+  * Icons 
+    
+    * All icons used are taken from Font Awesome [Font Awesome.](https://fontawesome.com/). I have used search button icon and icon used in add destination
+      form,direction icon used in all image cards, edit ,delete ,create links , umbrella icon used for external links,register button and social media
+      link in the footer even icon used in nav links both in overlay bar and footer links.
+
+# Database Model
+
+   * This project uses MongoDB for all database its a document-orientated database program.
+
+   * MongoDB Atlas is used as database backend for storing user and destination details. 
+     There are three collections name Categories , destinations and Users.
+
+     ![screenshot](static/wireframes/database.png)
+
+
+     
+     
+       
+
+
 
