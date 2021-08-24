@@ -81,7 +81,7 @@ html {
     transition: 0.5s all;
     background: #005AA7;
     background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);
-    background: linear-gradient(to right, #FFFDE4, #005AA7, );
+    background: linear-gradient(to right, #FFFDE4, #005AA7);
     cursor: pointer;
 }
 
@@ -621,9 +621,7 @@ img.main-cards {
     font-size: 18px;
     border: 0;
     border-style: none;
-    border-color: none;
-
-
+    border-color:transparent;
 }
 
 .searchbtn {
@@ -639,9 +637,8 @@ img.main-cards {
 }
 
 .form-control:focus {
-    color: none;
     background-color: transparent;
-    border-color: none;
+    border-color: transparent;
     outline: 0;
     box-shadow: none;
 }

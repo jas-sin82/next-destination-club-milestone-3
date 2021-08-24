@@ -26,14 +26,14 @@
                                     <label for="category_name"></label>
                                     <select class="form-select " aria-label="category select options" id="category_name"
                                         name="category_name" required>
-                                        <option value="">Category</option>>
+                                        <option value="">Category</option>
                                         {% for category in categories %}
                                             {% if category.category_name == destination.category_name %}
                                                <option value="{{ category.category_name }}" selected>
-                                                {{ category.category_name }}</option>
+                                               {{ category.category_name }}</option>
                                             {% else %}
-                                                <option value="{{ category.category_name }}">{{ category.category_name }}
-                                               </option>
+                                            <option value="{{ category.category_name }}">{{ category.category_name }}
+                                             </option>
                                             {% endif %}
                                         {% endfor %}
                                     </select>
@@ -66,7 +66,7 @@
                                         required>
                                     <label for="destination_image"><i class="far fa-images p-2"></i> Destination image
                                         URL</label>
-                                        <p class="url-message">Must be provide through a URL</p>
+                                    <p class="url-message">Must be provide through a URL</p>
                                 </div>
                                 <div class="form-floating mb-3">
                                     <textarea class="form-control" name="destination_description"
@@ -88,7 +88,10 @@
                                 <br>
                             </div>
                         </div>
+                    </div>
                 </form>
             </div>
         </div>
+    </div>
+</section>
 {% endblock %}

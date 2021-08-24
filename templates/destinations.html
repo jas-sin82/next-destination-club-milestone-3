@@ -2,35 +2,31 @@
 {% block content %}
 <!--heading and search input-->
 <h1 class="profile-name mb-5 text-center"> Best Destinations</h1>
-<section>
-    <form action="{{ url_for('search') }}" method="POST">
-        <div class=" main-box">
-            <div class="search-box mb-5">
-                <input type="text" name="query" id="query" class="form-control search-text pt-3" required
-                    placeholder="Search by destination">
-                <label for="query"></label>
-                <button type="submit" class="searchbtn"><i class="fas fa-search"></i></button>
-            </div>
-            <div>
-    </form>
-</section>
-<section>
-    <div class="container">
-        <!--get destinations-->
-        {% if destinations|length > 0 %}
-        <div class="row">
-            {% for destination in destinations %}
-            <div class=" col-lg-4 col-md-6">
-                <div class=" card card-body mb-5 card-size  ">
-                    <img src="{{ destination.destination_image }}" class=" main-cards card-img-top " alt="text">
-                    <a class="text-center show-text-2 mt-3 directions"
-                        href="{{url_for('single_destination_page', destination_id=destination._id)}}">
-                        {{ destination.destination_name }} <i class="fas fa-directions"></i> </a>
-                </div>
-            </div>
-            {% endfor %}
+<form action="{{ url_for('search') }}" method="POST">
+    <div class=" main-box">
+        <div class="search-box mb-5">
+            <input type="text" name="query" id="query" class="form-control search-text pt-3" required
+                placeholder="Search by destination">
+            <label for="query"></label>
+            <button type="submit" class="searchbtn"><i class="fas fa-search"></i></button>
         </div>
-        {% endif %}
     </div>
-</section>
+</form>
+<div class="container">
+    <!--get destinations-->
+    {% if destinations|length > 0 %}
+    <div class="row">
+        {% for destination in destinations %}
+        <div class=" col-lg-4 col-md-6">
+            <div class=" card card-body mb-5 card-size  ">
+                <img src="{{ destination.destination_image }}" class=" main-cards card-img-top " alt="text">
+                <a class="text-center show-text-2 mt-3 directions"
+                    href="{{url_for('single_destination_page', destination_id=destination._id)}}">
+                    {{ destination.destination_name }} <i class="fas fa-directions"></i> </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
 {% endblock %}

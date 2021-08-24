@@ -30,7 +30,7 @@
                                     <label for="category_name"></label>
                                     <select class="form-select " aria-label="category select options" id="category_name"
                                         name="category_name" required>
-                                        <option value="">Category</option>>
+                                        <option value="">Category</option>
                                         {% for category in categories %}
                                         <option value="{{ category.category_name }}">{{ category.category_name }}
                                         </option>
@@ -82,8 +82,10 @@
                                 <br>
                             </div>
                         </div>
+                    </div>
                 </form>
             </div>
         </div>
+    </div>
 </section>
 {% endblock %}

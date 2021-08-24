@@ -356,8 +356,10 @@ This project presents a Holidays destiantions call Next destination Club. This i
   *  W3C Validator HTML & W3C Validator CSS
 
      * Both used to test all the code for the project to check for valid HTML and CSS.
-     
 
+  * JSHint
+     
+     * It used to test and validate all Javascript written for this project.
 
 
      

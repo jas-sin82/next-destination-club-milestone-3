@@ -65,7 +65,7 @@ function validateName() {
 
   if (name.length == 0) {
 
-    producePrompt('Name is required', 'name-error', 'red')
+    producePrompt('Name is required', 'name-error', 'red');
     return false;
 
   }
