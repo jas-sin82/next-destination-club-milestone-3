@@ -4,7 +4,7 @@
 
 ### Overview
 
-This project presents a Holidays destiantions call Next destination Club. This is a website/app where User  can find and save their best destinations all around the world, User will able to create a account to see all destination or to save their own Holidays.Once user got login details next step is to update profile with add destination or to look around app to see the existing destiantion and other features.I have designed this project, fully focus on Database creation, security and CRUD(create, read, update and delete).App has a few diffrent webpages each page has diffrent contents and buttons but as user prospective each webpage will easily and smoothly will navigate user to their destination.
+This project presents a Holidays destiantions call Next destination Club. This is a website/app where User  can find and save their best destinations all around the world, User will able to create a account to see all destination or to save their own Holidays.Once user got login details next step is to update profile with add destination or to look around app to see the existing destination and other features.I have designed this project, fully focus on Database creation, security and CRUD(create, read, update and delete).App has a few diffrent webpages each page has different contents and buttons but as user prospective each webpage will easily and smoothly will navigate user to their destination.
 
 
 ##  Screenshots of project
@@ -14,8 +14,7 @@ This project presents a Holidays destiantions call Next destination Club. This i
 
 ![screenshot](static/images/responsive-snapshot.png)
 
-
- # Highlights
+# Highlights
 
 
  * [User Experience (UX)](#User-experience-UX)
@@ -26,7 +25,15 @@ This project presents a Holidays destiantions call Next destination Club. This i
 
     * [Wireframes of website](#wireframes-of-website)
 
-    * [Surface](#surface)
+    * [Design](#design)
+       
+        * [Colors](#colors)
+
+        * [Typography](#typography)
+
+        * [Imagery](#imagery)
+
+        * [Icons](#icons)
 
     * [Features](#features)
 
@@ -67,7 +74,7 @@ This project presents a Holidays destiantions call Next destination Club. This i
    * User is looking for app where user is able to find more stunning holidays destinations around the world.
      Author has provided some external links to user as well which will help them to find next holiday destination.
 
-    [Back to Highlights ](#highlights)
+   [Back to Highlights ](#highlights)
 
 ## User Stories
 
@@ -106,7 +113,7 @@ This project presents a Holidays destiantions call Next destination Club. This i
 
  *   As an Author of the site:
 
-    *  Be able to add new categories(right now author can edit or create new category)!
+     *  Be able to add new categories(right now author can edit or create new category)!
 
 # Strategy 
 
@@ -128,3 +135,17 @@ This project presents a Holidays destiantions call Next destination Club. This i
     * Edit & Delete a destination created by own.
     
     [Back to Highlights ](#highlights)
+
+# Wireframes of Website  
+
+### I used a balsamiq to create a wireframe. Here is link [balsamiq](https://www.balsamiq.com/)
+       
+ [Home page](static/wireframes/New.project-1.pdf) 
+  
+ [Add Destination](static/wireframes/New.project-2.pdf) 
+
+ [Destination](static/wireframes/New.project-3.pdf)
+
+
+ [Back to Highlights ](#highlights)
+
