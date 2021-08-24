@@ -156,13 +156,12 @@ def contact_page():
 
     return render_template("contact.html")
 
-
 # destination search 
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
     destinations = list(mongo.db.destinations.find(
-        {"$text": {"$search": query}}))
+        { "$or": [{'destination_name': query.title()}, {"country": query.title() }]}))
     return render_template("destinations.html", destinations=destinations)
 
 
