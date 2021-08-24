@@ -1,5 +1,4 @@
 import os
-import re
 from flask import(
     Flask, flash, render_template, 
     redirect, request, session, url_for)
@@ -19,8 +18,6 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-#mongo.db.destinations.find({"destination_name": {"$regex": search_term_regex, "$options": "ig"}})
-
 # Homepage
 @app.route("/")
 @app.route("/home_page")
@@ -28,7 +25,7 @@ def home_page():
     return render_template("index.html")
 
 
-# read-more page 
+# read-more-page 
 @app.route("/read_more")
 def read_more():
     return render_template("read-more.html")
@@ -377,4 +374,4 @@ def page_not_found(e):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)

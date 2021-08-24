@@ -279,7 +279,8 @@ This project presents a Holidays destiantions call Next destination Club. This i
   * Email notification functionality for users to be alerted when a new destination is added.
 
   * Add pagination to the next holiday destination, destinations would be displayed on a new page and pagination would be displayed.
-
+   
+    [Back to Highlights ](#highlights)
 
 # Technology used in a Project
 
@@ -360,6 +361,31 @@ This project presents a Holidays destiantions call Next destination Club. This i
   * JSHint
      
      * It used to test and validate all Javascript written for this project.
+
+    [Back to Highlights ](#highlights)
+
+# Deployment 
+  
+ ## Version control
+
+ The project was deployed on GitHub Pages. I used Gitpod as a work space where I commited all changes to git version control system. 
+ I used push command in Gitpod to save changes into GitHub.
+
+## Github
+
+  ### To run localy
+
+   * Log in to GitHub and click on repository to download ([Milestone Project 3](https://github.com/jas-sin82/next-destination-club-milestone-3)).
+   
+   * Select `Code` and click Download the ZIP file.
+   
+   * After download you can extract the file and use in your local environment.
+   
+   * Second option is you can [Clone](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)
+     or [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repository ([Milestone Project 3](https://github.com/jas-sin82/next-destination-club-milestone-3)) into your github account.
+  
+
+
 
 
      
