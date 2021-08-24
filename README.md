@@ -269,6 +269,37 @@ This project presents a Holidays destiantions call Next destination Club. This i
   *  Once User logout it will redirect user to login page and will get flash message!  for security purpose message will appear on top 
      (user has succesfully log out).
 
+## Features left  which I want to implement in future:-
+
+  * First implement will be allow  user  to upload profile image.
+
+  * Second implement will be create 2 extra input in add destination form ! first one will be hotel links so user will have idea what cost it will be 
+    around and second  will be links for sight touring of destination.
+
+  * Email notification functionality for users to be alerted when a new destination is added.
+
+  * Add pagination to the next holiday destination, destinations would be displayed on a new page and pagination would be displayed.
+
+
+# Technology used in a Project
+
+  ## Syntax
+
+   * HTML5 
+      
+      * Markup language used for structuring and presenting content on the internet.
+  
+   * CSS 
+
+      * Cascading Style Sheets tO style the whole structure of project.
+
+   * Java Script
+     
+      * Java script used for full screen overlay navigation menu and contact form validation.
+
+   * Emailjs 
+    
+      * 
 
 
 
