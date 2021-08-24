@@ -4,7 +4,7 @@
 <h1 class="profile-name mb-5 text-center"> Best Destinations</h1>
 <form action="{{ url_for('search') }}" method="POST">
     <div class=" main-box">
-        <div class="search-box mb-5">
+        <div class="search-box mb-4">
             <input type="text" name="query" id="query" class="form-control search-text pt-3" required
                 placeholder="Search by destination">
             <label for="query"></label>
@@ -12,6 +12,9 @@
         </div>
     </div>
 </form>
+<div class= "clear-button mb-5">
+<a href="{{ url_for('get_destinations') }}" class="btn home-page-button mb-2 clear-button-1 ">Reset</a>
+</div>
 <div class="container">
     <!--get destinations-->
     {% if destinations|length > 0 %}

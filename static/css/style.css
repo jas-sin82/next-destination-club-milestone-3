@@ -642,6 +642,18 @@ img.main-cards {
     outline: 0;
     box-shadow: none;
 }
+.clear-button{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.clear-button-1{
+    width:150px;
+    background:#192a56;
+    color:white;
+    opacity: 0.7;
+    
+}
 
 /*----------error page------*/
 
