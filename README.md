@@ -459,6 +459,8 @@ This project presents a Holidays destiantions call Next destination Club. This i
   
     ![screenshot](static/testing/destinations-images.png)
 
+    [Back to Highlights ](#highlights)
+
 # Error found during site development
 
    ### The developer face several issues during the development of the site ,Some of the issues below I got During my site development :-
@@ -499,12 +501,12 @@ This project presents a Holidays destiantions call Next destination Club. This i
 
     ![screenshot](static/testing/light-house-3.png)
 
+    [Back to Highlights ](#highlights)
+
   
 # Deployment 
 
-  
-  
- ## Version control
+## Version control
 
  The project was deployed on GitHub Pages. I used Gitpod as a work space where I commited all changes to git version control system. 
  I used push command in Gitpod to save changes into GitHub.
@@ -591,7 +593,7 @@ This project presents a Holidays destiantions call Next destination Club. This i
 
    ![screenshot](static/project-screenshot/mobile-responsive.png)
 
- 
+ [Back to Highlights ](#highlights)
 
 
     
