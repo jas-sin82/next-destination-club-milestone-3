@@ -1,5 +1,7 @@
 # Next Destination Club Holiday App
 
+[View Live Project Here](https://next-destination-milestone-3.herokuapp.com/)
+
 ## Data Centric Development Milestone 3 project.
 
 ### Overview
@@ -59,7 +61,7 @@ This project presents a Holidays destiantions call Next destination Club. This i
 
     * [Credits](#credits)
 
-    * [Screenshots of complete project](#screenshorts-of-complete-project)
+    * [ Responsive Screenshots ](#responsive-screenshots)
 
 
 #  User Experience (UX)
@@ -457,7 +459,47 @@ This project presents a Holidays destiantions call Next destination Club. This i
   
     ![screenshot](static/testing/destinations-images.png)
 
+# Error found during site development
 
+   ### The developer face several issues during the development of the site ,Some of the issues below I got During my site development :-
+
+   * During the site development I found the error in index.html ( webpage left margin in some of the images ) even I used margin 0 padding 0 in external css to removes all  
+    default margin and padding for every object on the page but it did not helped.
+
+   * I decided to decrease the left margin below 0 { margin-left:-15px;}. After when I inculde this line of code error was resolved.
+
+   * During the site development I found some issue with search bar! I tried to create index for search query but i could not success to create, I was seaching 
+    by destination_name and country. I tried both python3 shell and mongoDb  to create index but no success! then I contact  tutor support to resolve this issue.
+    my tutor and me we was nearly 2 hours struggling with this search query. every time it throw  lanaguage override error (pymongo.error.operationFailure)
+
+     ![screenshot](static/testing/screenshot-3.png)
+
+   *  Finally after struggling a few hours we able to resolve this issue to add this code ! 
+
+      ![screenshot](static/testing/search-code.png)
+
+  *  During the site development I found issue with my full page overlay nav menu ! Carousel on home page started overlap on menu bar en same error was on registration form
+     and login form! then I find out why its overlape to solve this issue I include this code
+
+     nav-bar {z-index : 200}
+     overlay-menu {z-index:300}
+
+  *  During the site development I have some issue with my workspace Gitpod! my workspace went in stopping mode and it showed me message I have not enough credit.
+     To resolve this issue I contact the tutor support , they put me in unlimited credit so my workspace worked as normal.
+
+# Performance Testing
+    
+  ## Google Lighthouse Testing
+
+  * I have used lighthouse tool to check the performance of website. Here is link [Lighthouse](https://developers.google.com)
+
+    ![screenshot](static/testing/light-house.png)
+
+    ![screenshot](static/testing/light-house-4.png)
+
+    ![screenshot](static/testing/light-house-3.png)
+
+  
 # Deployment 
 
   
@@ -521,10 +563,36 @@ This project presents a Holidays destiantions call Next destination Club. This i
 
   *  Success message will appear your app is successfully deployed, to live view click on View.
 
-  
+# Credits 
 
+  * Code Institute tutor support.
 
+  * Students on Slack for a helping hand when I've got stuck.
+
+  * My mentor gbenga_mentor for helpfull feedback througout the project.
+
+## Hints & Ideas
+
+  * W3Schools https://www.w3schools.com
+
+  * https://www.python.org/
+
+  * https://flask.palletsprojects.com/en/2.0.x/
+
+  * https://stackoverflow.com/
      
+## To finish this project I have used [Code Institute gitpod full template](https://github.com/Code-Institute-Org/gitpod-full-template) 
+
+
+# Responisve Screenshots 
+
+  ![screenshot](static/project-screenshot/ipad-responsive.png)
+
+
+   ![screenshot](static/project-screenshot/mobile-responsive.png)
+
+ 
+
 
     
 
