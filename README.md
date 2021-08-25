@@ -49,6 +49,8 @@ This project presents a Holidays destiantions call Next destination Club. This i
 
         * [Code Validation Test](#Code-validation-test)
 
+        * [User Stories Testing](#user-stories-testing)
+
         * [Error found during site development ](#Error-found-during-site-development)
 
         * [ Performance Testing ](#performance-testing)
@@ -364,7 +366,56 @@ This project presents a Holidays destiantions call Next destination Club. This i
 
     [Back to Highlights ](#highlights)
 
+# Testing 
+
+  ## Functionality Testing
+   
+   * I used Chrome developer tools throughout the project for testing and solving problems with responsiveness and 
+     style issues.
+
+  ## Compatibility Testing 
+
+  * Project has been tested on different devices such as Desktop, Ipad and on diffrent Mobiles Iphone x, Iphone 6,7,8 , Samsung Note 20 ,Iphone 5 ,Iphone4, Nexus and it works 
+    great.Webpage is fully responsive on all devices.
+
+     ![screenshot](static/testing/note-20.png)
+
+  ## Code Validation Test
+
+  ### HTML
+
+  * To make make it easier to validate html code, since using jinja templating language throughout all pages, which results in errors in online validators.
+
+  * There was no error on any html page but there was warning caused on some of the webpages because of  missing div , section , <h> tags.
+
+  ### CSS Validation
+
+  *  There was error due to I was declare color as :none then I changed it to transparent and check my css code again in css validator ! there was no error left.
+
+    
+     ![screenshot](static/testing/css-validation.png)
+
+ 
+  ### Javascript Validation
+
+  * JSHint Results
+   
+  ![screenshot](static/testing/jshint.png)
+
+  ### Python 
+
+  * PEP8 Online results
+
+  ![screenshot](static/testing/pep8-3.png)
+
+
+
+
+
+
 # Deployment 
+
+  
   
  ## Version control
 

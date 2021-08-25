@@ -159,7 +159,8 @@ def contact_page():
 def search():
     query = request.form.get("query")
     destinations = list(mongo.db.destinations.find(
-        { "$or": [{'destination_name': query.title()}, {"country": query.title() }]}))
+        { "$or": [{'destination_name': query.title(
+            )}, {"country": query.title() }]}))
     return render_template("destinations.html", destinations=destinations)
 
 
