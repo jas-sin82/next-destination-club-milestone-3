@@ -51,7 +51,7 @@
             {% for destination in destinations if session.user|lower == destination.created_by|lower %}
             <div class=" col-lg-4 col-md-6">
                 <div class=" card card-body mb-5">
-                    <img src="{{ destination.destination_image }}" class="card-img-top" alt="...">
+                    <img src="{{ destination.destination_image }}" class="card-img-top" alt="text">
                     <a class="text-center show-text-2"
                         href="{{url_for('single_destination_page', destination_id=destination._id)}}">
                         {{ destination.destination_name }} </a>
