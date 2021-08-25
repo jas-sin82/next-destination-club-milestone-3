@@ -409,8 +409,53 @@ This project presents a Holidays destiantions call Next destination Club. This i
   ![screenshot](static/testing/pep8-3.png)
 
 
+## User Stories Testing
+ 
+  ### First Time Visitor Goals 
 
+  *  As a first time visitor, I want the site navigation to be intutive, user friendly and easy to get on destination.
+     App has a  full page overlay menu navbar that is present wherever page (even if visitor scrolls down) the visitor can looking at 
+     menu bar and it is clearly displaying all pages/links for a new user to make navigation through the site easy and effortless.
 
+     ![screenshot](static/testing/menu-bar.png)
+    
+     ![screenshot](static/testing/menu-bar-2.png)
+
+  *  As a first time visitor, I want to easily understand the main purpose of the App.
+     When visitor enters website, the visitors is welcomed by a some stunning images and content another thing a really clean header 
+     with menu icon and content of the home page that clealy explains the purpose of the site.
+
+  *  As a first time visitor, I want to be able to create, read, update, delete and search for destinations.
+     There is a register button at Home page that will redirect visitor to Register page. Once visitor register safly and they can access all the pages and to see the  
+     destinations and discription to click on image title and  they can start create there own. When visitor created a destination, visitor is allowed to edit and delete.
+
+     ![screenshot](static/testing/registration-button-1.png)
+
+  *  As a first time visitor, I want to contact information or social media links to be able to contact author, and feel free to send response about site.
+     There is contact form link it has provided both in menu bar and footer nav links.
+
+     ![screenshot](static/testing/contact-form.png)
+
+  ### Returning Visitor Goals
+
+   * As a returning visitor, I want to be able to easily log in, if I already registered last time visiting.
+     Visitor can click on Log In link on menu bar or footer nav link it will redirect to Log In page.
+
+   * As a returning visitor, I want to be able to create, read, update, delete my profile data.
+     I want full access on my Account, visitor can update their user name and password full securly.
+
+   *  As a returning visitor, I want able to contact the author of the site to send some feedback 
+     releated weppage.
+
+   * As a returning visitor, I want to be able to create, read, update, delete my own destinations.
+
+  ### Frequent Visitor Goals
+
+  * As a frequent visitor, I want to be smoothly and fastly add destination.
+
+  * As a frequent visitor; destinations continuously updated with newly added destinations by other users and author of the site as well.
+  
+    ![screenshot](static/testing/destinations-images.png)
 
 
 # Deployment 
